@@ -3,58 +3,333 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TERF Wiki</title>
+    <title>Glossary | TERF Wiki</title>
     <meta
       name="description"
-      content="Placeholder landing page for a docs-style GitHub Pages wiki."
+      content="Placeholder glossary page for a docs-style GitHub Pages wiki."
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./theme.js" defer></script>
   </head>
-  <body class="landing-body">
-    <div class="page-shell">
-      <header class="landing-hero">
-        <p class="eyebrow">GitHub Pages Wiki</p>
-        <h1>TERF Wiki</h1>
-        <p class="hero-copy">
-          This is a placeholder docs scaffold modeled after a glossary-style
-          reference site. It gives you a clean starting point now, and we can
-          swap in real content later.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="./overview/glossary/"
-            >Open Glossary</a
+  <body class="docs-body">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html">
+          <span class="brand-title">TERF Wiki</span>
+          <span class="brand-subtitle">Placeholder docs reference</span>
+        </a>
+        <div class="topbar-actions">
+          <a class="topbar-link" href="#mod-templates">Jump to Mod Templates</a>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+            data-theme-toggle
           >
-          <a
-            class="button button-secondary"
-            href="./overview/glossary/#mod-templates"
-            >Jump to Mod Templates</a
-          >
+            <span data-theme-label>Dark mode</span>
+          </button>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main class="landing-grid">
-        <section class="feature-card">
-          <h2>Docs-Like Layout</h2>
-          <p>
-            Sidebar navigation, anchored sections, and a readable content column
-            similar to the reference page you shared.
+    <div class="docs-layout">
+      <aside class="site-sidebar">
+        <p class="sidebar-title">Overview</p>
+        <nav class="sidebar-nav" aria-label="Section navigation">
+          <a href="#overview">Overview</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#people-and-groups">People And Groups</a>
+          <a href="#locations">Locations</a>
+          <a href="#themes">Themes</a>
+          <a href="#mod-templates">Mod Templates</a>
+          <a href="#reference">Reference</a>
+        </nav>
+      </aside>
+
+      <main class="doc-panel">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+          <span>Home</span>
+          <span>/</span>
+          <span>Overview</span>
+          <span>/</span>
+          <span>Glossary</span>
+        </nav>
+
+        <h1 class="doc-title">Glossary</h1>
+        <p class="doc-intro">
+          Every page idea for this wiki, grouped into placeholder sections so
+          the structure is ready before the real writing starts. This page is
+          intentionally scaffold-first: the layout is in place, the categories
+          are visible, and each entry can be swapped for real content later.
+        </p>
+
+        <p class="callout">
+          Placeholder note: the items below are temporary stand-ins for future
+          articles, templates, and reference pages.
+        </p>
+
+        <section class="doc-section" id="overview">
+          <h2>Overview</h2>
+          <p class="section-copy">
+            High-level pages that explain what the project is, what belongs in
+            the wiki, and how readers should navigate it.
           </p>
+          <div class="entry-list">
+            <article class="entry">
+              <h3>Introduction</h3>
+              <p>
+                A welcome page that explains the scope of the wiki, its tone,
+                and what kind of material will eventually live here.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Placeholder</span>
+                <span class="pill">Overview</span>
+              </div>
+            </article>
+            <article class="entry">
+              <h3>How To Use This Wiki</h3>
+              <p>
+                A quick navigation guide for new readers, including where to
+                find summaries, timelines, deep dives, and source lists.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Placeholder</span>
+                <span class="pill">Guide</span>
+              </div>
+            </article>
+          </div>
         </section>
-        <section class="feature-card">
-          <h2>Placeholder Content</h2>
-          <p>
-            Every section is filled with temporary text so you can decide the
-            real categories later without worrying about layout first.
+
+        <section class="doc-section" id="timeline">
+          <h2>Timeline</h2>
+          <p class="section-copy">
+            Time-based placeholder entries for key eras, turning points, and
+            notable phases of the subject matter.
           </p>
+          <div class="entry-list">
+            <article class="entry">
+              <h3>Early Period</h3>
+              <p>
+                A stub for covering origins, first appearances, and the initial
+                conditions that shaped everything that came after.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Timeline</span>
+                <span class="pill">Draft Later</span>
+              </div>
+            </article>
+            <article class="entry">
+              <h3>Major Turning Point</h3>
+              <p>
+                A placeholder summary for the event or change that most clearly
+                divides the earlier phase from the later one.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Timeline</span>
+                <span class="pill">Anchor Topic</span>
+              </div>
+            </article>
+          </div>
         </section>
-        <section class="feature-card">
-          <h2>Static And Simple</h2>
-          <p>
-            No build step is required. You can publish this directly with GitHub
-            Pages from the repository.
+
+        <section class="doc-section" id="people-and-groups">
+          <h2>People And Groups</h2>
+          <p class="section-copy">
+            Character pages, organization pages, and relationship summaries can
+            live here once the wiki starts getting filled in for real.
           </p>
+          <div class="entry-list">
+            <article class="entry">
+              <h3>Key Figure Placeholder</h3>
+              <p>
+                Use this for a central person profile with background, role,
+                notable actions, and links to connected pages.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Profile</span>
+                <span class="pill">Needs Sources</span>
+              </div>
+            </article>
+            <article class="entry">
+              <h3>Group Overview Placeholder</h3>
+              <p>
+                A future home for a group or faction summary, including goals,
+                major members, internal conflicts, and notable milestones.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Group</span>
+                <span class="pill">Cross-Reference</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="doc-section" id="locations">
+          <h2>Locations</h2>
+          <p class="section-copy">
+            Settings, places, hubs, and recurring environments can all be
+            indexed here with short summaries and later expanded into full pages.
+          </p>
+          <div class="entry-list">
+            <article class="entry">
+              <h3>Primary Setting</h3>
+              <p>
+                Placeholder copy for the main location page, covering why it
+                matters, who is connected to it, and what events happen there.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Location</span>
+                <span class="pill">Core Page</span>
+              </div>
+            </article>
+            <article class="entry">
+              <h3>Secondary Hub</h3>
+              <p>
+                A smaller location entry stub for spin-off spaces, regional
+                pages, or pages that support the main setting.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Location</span>
+                <span class="pill">Expandable</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="doc-section" id="themes">
+          <h2>Themes</h2>
+          <p class="section-copy">
+            Theme pages can track recurring ideas, talking points, debates, or
+            motifs that show up across multiple articles.
+          </p>
+          <div class="entry-list">
+            <article class="entry">
+              <h3>Theme Cluster A</h3>
+              <p>
+                Placeholder copy for a topic index that ties together several
+                related articles under one shared concept.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Theme</span>
+                <span class="pill">Index Page</span>
+              </div>
+            </article>
+            <article class="entry">
+              <h3>Theme Cluster B</h3>
+              <p>
+                Another future cross-linking page for ideas that will probably
+                need summaries more than strict chronology.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Theme</span>
+                <span class="pill">Placeholder</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="doc-section" id="mod-templates">
+          <h2>Mod Templates</h2>
+          <p class="section-copy">
+            This section mirrors the part of the reference page you called out:
+            starter examples that can eventually become full end-to-end guides.
+          </p>
+          <div class="template-grid">
+            <article class="template-card">
+              <h3>Starter Article Template</h3>
+              <p>
+                A simple article layout with a summary block, key details,
+                source notes, and room for a short timeline.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Template</span>
+                <span class="pill">Easy Start</span>
+              </div>
+            </article>
+            <article class="template-card">
+              <h3>Timeline Deep Dive Template</h3>
+              <p>
+                A longer page pattern designed for event-heavy topics that need
+                chronology, context, and aftermath sections.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Template</span>
+                <span class="pill">Chronology</span>
+              </div>
+            </article>
+            <article class="template-card">
+              <h3>Person Profile Template</h3>
+              <p>
+                A profile scaffold with identity basics, role, alliances,
+                notable statements, and related pages.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Template</span>
+                <span class="pill">Profiles</span>
+              </div>
+            </article>
+            <article class="template-card">
+              <h3>Group Overview Template</h3>
+              <p>
+                A reusable page shell for organizations, communities, or teams,
+                with room for history, structure, and important disputes.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Template</span>
+                <span class="pill">Groups</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="doc-section" id="reference">
+          <h2>Reference</h2>
+          <p class="section-copy">
+            Quick lookup material belongs here: indexes, naming conventions,
+            source logs, and other utility pages.
+          </p>
+          <div class="entry-list">
+            <article class="entry">
+              <h3>Source Index</h3>
+              <p>
+                A future master list of citations, links, uploads, and notes so
+                the rest of the wiki can point back to a common source catalog.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Reference</span>
+                <span class="pill">Utilities</span>
+              </div>
+            </article>
+            <article class="entry">
+              <h3>Naming Conventions</h3>
+              <p>
+                A placeholder page for deciding how titles, tags, aliases, and
+                redirects should be written across the project.
+              </p>
+              <div class="meta-row">
+                <span class="pill">Reference</span>
+                <span class="pill">Editorial</span>
+              </div>
+            </article>
+          </div>
         </section>
       </main>
+
+      <aside class="page-outline">
+        <p class="outline-title">On This Page</p>
+        <p class="outline-copy">
+          This mini outline keeps the page feeling like a proper docs hub.
+        </p>
+        <nav class="outline-nav" aria-label="Page outline">
+          <a href="#overview">Overview</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#people-and-groups">People And Groups</a>
+          <a href="#locations">Locations</a>
+          <a href="#themes">Themes</a>
+          <a href="#mod-templates">Mod Templates</a>
+          <a href="#reference">Reference</a>
+        </nav>
+      </aside>
     </div>
   </body>
 </html>

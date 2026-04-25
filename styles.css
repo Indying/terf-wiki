@@ -16,6 +16,21 @@
   --radius-sm: 12px;
 }
 
+:root[data-theme="dark"] {
+  --bg: #171912;
+  --bg-strong: #22271a;
+  --surface: rgba(32, 35, 27, 0.82);
+  --surface-strong: #1f231b;
+  --border: rgba(227, 212, 184, 0.12);
+  --text: #f4ebd9;
+  --muted: #c2b79f;
+  --accent: #e1b06a;
+  --accent-strong: #f0c98d;
+  --accent-soft: #8d6d35;
+  --sidebar: rgba(27, 31, 24, 0.94);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -32,6 +47,9 @@ body {
     radial-gradient(circle at bottom right, rgba(77, 102, 68, 0.2), transparent 30%),
     linear-gradient(180deg, #f8f4ea 0%, var(--bg) 100%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition:
+    background 220ms ease,
+    color 220ms ease;
 }
 
 a {
@@ -187,6 +205,14 @@ h3 {
   gap: 16px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .brand {
   text-decoration: none;
 }
@@ -208,6 +234,27 @@ h3 {
   text-decoration: none;
   color: var(--accent);
   font-weight: 700;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: rgba(255, 250, 240, 0.6);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(122, 75, 31, 0.12);
 }
 
 .docs-layout {
@@ -329,6 +376,31 @@ h3 {
   border-radius: var(--radius-md);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(249, 245, 236, 0.96));
+}
+
+:root[data-theme="dark"] .topbar {
+  background: rgba(22, 25, 18, 0.88);
+  border-bottom-color: rgba(227, 212, 184, 0.08);
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background: rgba(49, 54, 43, 0.78);
+}
+
+:root[data-theme="dark"] .button-secondary,
+:root[data-theme="dark"] .entry,
+:root[data-theme="dark"] .template-card {
+  background:
+    linear-gradient(180deg, rgba(40, 44, 35, 0.96), rgba(30, 34, 27, 0.98));
+}
+
+:root[data-theme="dark"] .callout {
+  background: rgba(141, 109, 53, 0.18);
+}
+
+:root[data-theme="dark"] .pill {
+  background: rgba(225, 176, 106, 0.14);
+  color: #f0d7af;
 }
 
 .entry h3 {
