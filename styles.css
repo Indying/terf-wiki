@@ -43,10 +43,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   position: relative;
   margin: 0;
@@ -61,11 +57,13 @@ body {
 body::before {
   content: "";
   position: fixed;
-  inset: -36px;
+  inset: -24px;
   z-index: -2;
-  background: center center / cover no-repeat url("./images/bgimage.png");
-  filter: blur(18px) brightness(var(--image-brightness)) saturate(var(--image-saturation));
-  transform: scale(1.08);
+  background: center center / cover no-repeat url("./images/bgimage-optimized.webp");
+  filter: blur(12px) brightness(var(--image-brightness)) saturate(var(--image-saturation));
+  transform: scale(1.04);
+  will-change: transform;
+  pointer-events: none;
 }
 
 body::after {
@@ -100,7 +98,6 @@ a {
 .site-sidebar,
 .doc-panel,
 .page-outline {
-  backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
 }
 
@@ -221,7 +218,6 @@ h3 {
   z-index: 20;
   border-bottom: 1px solid rgba(34, 60, 94, 0.08);
   background: rgba(241, 247, 255, 0.6);
-  backdrop-filter: blur(12px);
 }
 
 .topbar-inner {
@@ -422,6 +418,10 @@ h3 {
   background: rgba(14, 24, 38, 0.88);
 }
 
+:root[data-theme="dark"] .glossary-search-input {
+  background: rgba(8, 14, 24, 0.78);
+}
+
 :root[data-theme="dark"] .button-secondary,
 :root[data-theme="dark"] .entry,
 :root[data-theme="dark"] .template-card,
@@ -603,6 +603,61 @@ h3 {
   gap: 16px;
 }
 
+.glossary-search-section {
+  margin-bottom: 18px;
+}
+
+.glossary-search-shell {
+  display: grid;
+  gap: 10px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(246, 250, 255, 0.62);
+}
+
+.glossary-search-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.glossary-search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--text);
+  font: inherit;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.glossary-search-input::placeholder {
+  color: var(--muted);
+}
+
+.glossary-search-input:focus {
+  outline: none;
+  border-color: rgba(38, 94, 163, 0.4);
+  box-shadow: 0 0 0 3px rgba(38, 94, 163, 0.12);
+}
+
+.glossary-search-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.glossary-empty-state {
+  margin-top: 16px;
+}
+
 .glossary-group {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -702,6 +757,17 @@ h3 {
   font-weight: 700;
 }
 
+@supports (content-visibility: auto) {
+  .doc-section,
+  .entry,
+  .catalog-card,
+  .group-link-card,
+  .glossary-group {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 280px;
+  }
+}
+
 .outline-copy {
   margin: 0 0 14px;
   font-size: 0.94rem;
@@ -780,5 +846,20 @@ h3 {
 
   .brand-subtitle {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

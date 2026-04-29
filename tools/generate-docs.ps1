@@ -1663,6 +1663,7 @@ $indexPage = @"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./theme.js" defer></script>
+    <script src="./glossary-search.js" defer></script>
   </head>
   <body class="docs-body">
     <header class="topbar">
@@ -1720,11 +1721,31 @@ $indexPage = @"
           Scope note: this pass documents TERF-specific content and keeps the root glossary focused on navigation instead of rendering every entry at once.
         </p>
 
+        <section class="doc-section glossary-search-section">
+          <div class="glossary-search-shell">
+            <label class="glossary-search-label" for="glossary-search">Search Glossary</label>
+            <input
+              class="glossary-search-input"
+              id="glossary-search"
+              type="search"
+              placeholder="Search categories, groups, and descriptions..."
+              autocomplete="off"
+              data-glossary-search
+            />
+            <p class="glossary-search-status" data-glossary-search-status>
+              Showing all glossary groups.
+            </p>
+          </div>
+        </section>
+
         <section class="doc-section">
           <h2>Browse By Category</h2>
           <div class="glossary-stack">
             $($glossaryGroupsHtml -join "`n")
           </div>
+          <p class="empty-note glossary-empty-state" data-glossary-empty hidden>
+            No glossary groups matched that search yet.
+          </p>
         </section>
       </main>
 
