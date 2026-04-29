@@ -1,0 +1,1 @@
+$execute store result storage terf:temp args.float double $(float) run scoreboard players get temp terf_states

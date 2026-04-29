@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "hit_interaction": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:interaction"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "terf:entity/player/advancement/hit_interaction"
+  }
+}

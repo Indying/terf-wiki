@@ -1,0 +1,1 @@
+$execute store result storage terf:temp args.suffix int 1 run scoreboard players get $(name) $(objective)

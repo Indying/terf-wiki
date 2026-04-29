@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ red_glazed_terracotta run function datapipes_lib:require/pipe_presets/lightning_rod/corner_off

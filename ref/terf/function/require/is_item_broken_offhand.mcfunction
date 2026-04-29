@@ -1,0 +1,1 @@
+execute if items entity @s weapon.offhand *[minecraft:damage~{durability:{max:0}}] run return 1

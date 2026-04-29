@@ -1,0 +1,1 @@
+execute as @s[tag=!terf_exploded] run function terf:entity/machines/fission_reactor/explode_core_others

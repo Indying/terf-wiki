@@ -1,0 +1,1 @@
+$data modify entity @s text.color set from storage terf:constants blackbody_hex.$(temp)

@@ -1,0 +1,1 @@
+$execute positioned ^$(hpos) ^-.01 ^ run function terf:test/camera/shoot

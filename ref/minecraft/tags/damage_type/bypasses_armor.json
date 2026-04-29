@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "terf:ban_hammer",
+    "terf:shockwave",
+    "terf:hadron_collider",
+    "terf:ender_chest_failure"
+  ]
+}

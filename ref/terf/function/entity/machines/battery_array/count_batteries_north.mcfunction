@@ -1,0 +1,2 @@
+execute positioned ~ ~ ~-1 if block ~ ~ ~ orange_glazed_terracotta[facing=north] run function terf:entity/machines/battery_array/count_batteries_north
+function terf:entity/machines/battery_array/count_batteries

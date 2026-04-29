@@ -1,0 +1,1 @@
+$data modify storage terf:temp args.string set value '$(string)if block ~$(x) ~$(y) ~$(z) #terf:tank_blocks '

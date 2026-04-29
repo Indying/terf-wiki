@@ -1,0 +1,1 @@
+$data modify storage terf:constants pressurizer_storage.$(machine_id) append from entity @s Pos

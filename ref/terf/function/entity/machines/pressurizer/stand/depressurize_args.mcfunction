@@ -1,0 +1,1 @@
+$execute as @e[type=marker,tag=terf_pressurizer,tag=terf_machineid_$(machine_id)] run function terf:entity/machines/pressurizer/depressurize with entity @s data.terf

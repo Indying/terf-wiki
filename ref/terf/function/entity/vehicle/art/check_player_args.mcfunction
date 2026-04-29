@@ -1,0 +1,1 @@
+$execute unless data storage terf:temp temp[{i:$(id)}] run tag @s add terf_art_target

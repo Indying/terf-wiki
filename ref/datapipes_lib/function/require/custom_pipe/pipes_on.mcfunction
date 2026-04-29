@@ -1,0 +1,2 @@
+$data modify storage datapipes_lib:temp args set value {axis:'$(axis)',corner:'$(corner)'}
+$execute if block ~ ~ ~ $(corner) run function datapipes_lib:require/custom_pipe/corner_on with storage datapipes_lib:temp args

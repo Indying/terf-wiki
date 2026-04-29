@@ -1,0 +1,1 @@
+$data modify entity @s data.power set value {checks:'if block ^$(x) ^$(y) ^$(z) red_glazed_terracotta',outpos:'^$(x) ^$(y) ^$(z)'}

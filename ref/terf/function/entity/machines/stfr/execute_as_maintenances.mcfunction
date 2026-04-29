@@ -1,0 +1,1 @@
+$execute as @e[type=minecraft:marker,tag=terf_maintenance,tag=terf_related_$(machine_id)] at @s run function terf:entity/machines/stfr/maintenance/as_marker with entity @s data.terf.maintenance

@@ -1,0 +1,1 @@
+$execute if data entity @s data.terf.security_config[{i:$(id)}] run scoreboard players set succeeded terf_states 1

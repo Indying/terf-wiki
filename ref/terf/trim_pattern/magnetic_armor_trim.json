@@ -1,0 +1,7 @@
+{
+  "asset_id": "terf:magnetic",
+  "description": {
+    "translate": "trim_pattern.terf.magnetic"
+  },
+  "template_item": "minecraft:lodestone"
+}

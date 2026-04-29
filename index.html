@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <title>Glossary | TERF Wiki</title>
     <meta
       name="description"
-      content="Placeholder glossary page for a docs-style GitHub Pages wiki."
+      content="Generated TERF pack glossary covering machines, items, hazards, systems, and world content."
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./theme.js" defer></script>
@@ -16,10 +16,10 @@
       <div class="topbar-inner">
         <a class="brand" href="./index.html">
           <span class="brand-title">TERF Wiki</span>
-          <span class="brand-subtitle">Placeholder docs reference</span>
+          <span class="brand-subtitle">Generated pack reference</span>
         </a>
         <div class="topbar-actions">
-          <a class="topbar-link" href="#mod-templates">Jump to Mod Templates</a>
+          <a class="topbar-link" href="#machines">Browse Machines</a>
           <button
             class="theme-toggle"
             type="button"
@@ -34,15 +34,14 @@
 
     <div class="docs-layout">
       <aside class="site-sidebar">
-        <p class="sidebar-title">Overview</p>
+        <p class="sidebar-title">Glossary</p>
         <nav class="sidebar-nav" aria-label="Section navigation">
-          <a href="#overview">Overview</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#people-and-groups">People And Groups</a>
-          <a href="#locations">Locations</a>
-          <a href="#themes">Themes</a>
-          <a href="#mod-templates">Mod Templates</a>
-          <a href="#reference">Reference</a>
+          <a href="#machines">Machines</a>
+          <a href="#items-blocks">Items &amp; Blocks</a>
+          <a href="#concepts-systems">Concepts &amp; Systems</a>
+          <a href="#hazards">Hazards</a>
+          <a href="#world-dimensions">World &amp; Dimensions</a>
+          <a href="#media-cosmetics">Media &amp; Cosmetics</a>
         </nav>
       </aside>
 
@@ -50,285 +49,1840 @@
         <nav class="breadcrumbs" aria-label="Breadcrumbs">
           <span>Home</span>
           <span>/</span>
-          <span>Overview</span>
-          <span>/</span>
           <span>Glossary</span>
         </nav>
 
         <h1 class="doc-title">Glossary</h1>
         <p class="doc-intro">
-          Every page idea for this wiki, grouped into placeholder sections so
-          the structure is ready before the real writing starts. This page is
-          intentionally scaffold-first: the layout is in place, the categories
-          are visible, and each entry can be swapped for real content later.
+          This glossary was generated from the custom TERF namespace inside <code>ref/terf</code>. It organizes the pack into machine pages, item/block pages, hazards, world entries, and broader gameplay concepts so the reference can keep growing from the source data instead of hand-maintained lists.
         </p>
 
         <p class="callout">
-          Placeholder note: the items below are temporary stand-ins for future
-          articles, templates, and reference pages.
+          Scope note: this pass documents TERF-specific content and ignores the copied vanilla/support namespaces unless they directly inform TERF pages.
         </p>
 
-        <section class="doc-section" id="overview">
-          <h2>Overview</h2>
-          <p class="section-copy">
-            High-level pages that explain what the project is, what belongs in
-            the wiki, and how readers should navigate it.
-          </p>
-          <div class="entry-list">
-            <article class="entry">
-              <h3>Introduction</h3>
-              <p>
-                A welcome page that explains the scope of the wiki, its tone,
-                and what kind of material will eventually live here.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Placeholder</span>
-                <span class="pill">Overview</span>
-              </div>
-            </article>
-            <article class="entry">
-              <h3>How To Use This Wiki</h3>
-              <p>
-                A quick navigation guide for new readers, including where to
-                find summaries, timelines, deep dives, and source lists.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Placeholder</span>
-                <span class="pill">Guide</span>
-              </div>
-            </article>
+        <section class="doc-section">
+          <h2>Pack Snapshot</h2>
+          <div class="stat-grid">
+            <article class="stat-card">
+  <h2>Machines</h2>
+  <p class="stat-value">58</p>
+  <p>Operational machinery and multiblock systems discovered in the TERF function tree.</p>
+</article>
+<article class="stat-card">
+  <h2>Items &amp; Blocks</h2>
+  <p class="stat-value">57</p>
+  <p>Craftable items, placement blocks, and utility components surfaced through TERF recipes.</p>
+</article>
+<article class="stat-card">
+  <h2>Concepts &amp; Systems</h2>
+  <p class="stat-value">44</p>
+  <p>Gameplay systems, scripted entities, advancements, and mechanics that define how the pack behaves.</p>
+</article>
+<article class="stat-card">
+  <h2>Hazards</h2>
+  <p class="stat-value">19</p>
+  <p>Custom damage sources, failure modes, and environmental threats.</p>
+</article>
+<article class="stat-card">
+  <h2>World &amp; Dimensions</h2>
+  <p class="stat-value">8</p>
+  <p>Dimensions, biomes, and timeline definitions that shape TERF&#39;s spaces.</p>
+</article>
+<article class="stat-card">
+  <h2>Media &amp; Cosmetics</h2>
+  <p class="stat-value">7</p>
+  <p>Trim patterns, paintings, and jukebox songs included in the pack.</p>
+</article>
           </div>
         </section>
 
-        <section class="doc-section" id="timeline">
-          <h2>Timeline</h2>
-          <p class="section-copy">
-            Time-based placeholder entries for key eras, turning points, and
-            notable phases of the subject matter.
-          </p>
-          <div class="entry-list">
-            <article class="entry">
-              <h3>Early Period</h3>
-              <p>
-                A stub for covering origins, first appearances, and the initial
-                conditions that shaped everything that came after.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Timeline</span>
-                <span class="pill">Draft Later</span>
-              </div>
-            </article>
-            <article class="entry">
-              <h3>Major Turning Point</h3>
-              <p>
-                A placeholder summary for the event or change that most clearly
-                divides the earlier phase from the later one.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Timeline</span>
-                <span class="pill">Anchor Topic</span>
-              </div>
-            </article>
-          </div>
-        </section>
+        <section class="doc-section" id="machines">
+  <h2>Machines</h2>
+  <p class="section-copy">Operational machinery and multiblock systems discovered in the TERF function tree.</p>
+  <div class="catalog-grid">
+    <article class="catalog-card">
+  <h3><a href="./entries/machines/conveyor.html">Conveyor</a></h3>
+  <p>Machine logic implemented through 4 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fluid-pump.html">Fluid Pump</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/turbine-medium.html">Turbine Medium</a></h3>
+  <p>Machine logic implemented through 6 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/block-breaker.html">Block Breaker</a></h3>
+  <p>Machine logic implemented through 4 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/large-fluid-solidifier.html">Large Fluid Solidifier</a></h3>
+  <p>Machine logic implemented through 8 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/rolling-mill.html">Rolling Mill</a></h3>
+  <p>Machine logic implemented through 6 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/chunk-loader.html">Chunk Loader</a></h3>
+  <p>Machine logic implemented through 7 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fission-sensor.html">Fission Sensor</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/arc-furnace.html">Arc Furnace</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fabricator.html">Fabricator</a></h3>
+  <p>Machine logic implemented through 8 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/turbine-large.html">Turbine Large</a></h3>
+  <p>Machine logic implemented through 10 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/gear-elevator.html">Gear Elevator</a></h3>
+  <p>Machine logic implemented through 23 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/mcfr.html">MCFR</a></h3>
+  <p>Machine logic implemented through 36 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/stfr-control-panel.html">STFR Control Panel</a></h3>
+  <p>Machine logic implemented through 39 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/ebf.html">EBF</a></h3>
+  <p>Machine logic implemented through 6 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fission-reactor.html">Fission Reactor</a></h3>
+  <p>Machine logic implemented through 8 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/ore-drill.html">Ore Drill</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/deuterium-concentrator.html">Deuterium Concentrator</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/pressurizer.html">Pressurizer</a></h3>
+  <p>Machine logic implemented through 15 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/wet-mill.html">Wet Mill</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/crusher.html">Crusher</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/variable-resistor.html">Variable Resistor</a></h3>
+  <p>Machine logic implemented through 1 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/charging-station.html">Charging Station</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/assembler.html">Assembler</a></h3>
+  <p>Machine logic implemented through 17 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/multi-piston.html">Multi Piston</a></h3>
+  <p>Machine logic implemented through 9 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/crane.html">Crane</a></h3>
+  <p>Machine logic implemented through 22 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/warp-core.html">Warp Core</a></h3>
+  <p>Machine logic implemented through 46 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/opencore.html">OpenCore</a></h3>
+  <p>Machine logic implemented through 47 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fission-fuel-loader.html">Fission Fuel Loader</a></h3>
+  <p>Machine logic implemented through 7 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/lamp-controller.html">Lamp Controller</a></h3>
+  <p>Machine logic implemented through 10 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fluid-tank.html">Fluid Tank</a></h3>
+  <p>Machine logic implemented through 11 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/breakers.html">Breakers</a></h3>
+  <p>Machine logic implemented through 8 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/magma-drill.html">Magma Drill</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/battery-array.html">Battery Array</a></h3>
+  <p>Machine logic implemented through 12 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/fission-reactor-panel.html">Fission Reactor Panel</a></h3>
+  <p>Machine logic implemented through 2 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/opencore-control-panel.html">OpenCore Control Panel</a></h3>
+  <p>Machine logic implemented through 20 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/purifier.html">Purifier</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/dev-block.html">Dev Block</a></h3>
+  <p>Machine logic implemented through 1 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/stfr.html">STFR</a></h3>
+  <p>Machine logic implemented through 314 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/capsule-interface.html">Capsule Interface</a></h3>
+  <p>Machine logic implemented through 11 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/mainframe.html">Mainframe</a></h3>
+  <p>Machine logic implemented through 26 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/redstone-probe.html">Redstone Probe</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/hadron-collider.html">Hadron Collider</a></h3>
+  <p>Machine logic implemented through 24 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>3 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Advancement</span><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/multiblock-core.html">Multiblock Core</a></h3>
+  <p>Craft your first multiblock core using the recipe book</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/security-turret.html">Security Turret</a></h3>
+  <p>Machine logic implemented through 16 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/block-placer.html">Block Placer</a></h3>
+  <p>Machine logic implemented through 4 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/security-terminal.html">Security Terminal</a></h3>
+  <p>Machine logic implemented through 18 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/stasis-laser.html">Stasis Laser</a></h3>
+  <p>Machine logic implemented through 16 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/electrolyzer.html">Electrolyzer</a></h3>
+  <p>Machine logic implemented through 6 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/electric-press.html">Electric Press</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/chimney.html">Chimney</a></h3>
+  <p>Machine logic implemented through 3 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/warp-core-panel.html">Warp Core Panel</a></h3>
+  <p>Machine logic implemented through 11 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/extrusion-press.html">Extrusion Press</a></h3>
+  <p>Machine logic implemented through 6 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/diesel-generator.html">Diesel Generator</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/shearing-press.html">Shearing Press</a></h3>
+  <p>Machine logic implemented through 7 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/steam-engine.html">Steam Engine</a></h3>
+  <p>Machine logic implemented through 5 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/laser.html">Laser</a></h3>
+  <p>Machine logic implemented through 9 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/machines/solar-panel.html">Solar Panel</a></h3>
+  <p>Machine logic implemented through 21 function file(s) under the TERF machine controller tree.</p>
+  <div class="catalog-meta">
+    <span>Machines</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+  </div>
+</section>
+<section class="doc-section" id="items-blocks">
+  <h2>Items &amp; Blocks</h2>
+  <p class="section-copy">Craftable items, placement blocks, and utility components surfaced through TERF recipes.</p>
+  <div class="catalog-grid">
+    <article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-copper-trapdoor.html">Exposed Copper Trapdoor</a></h3>
+  <p>Process recipe entry for Exposed Copper Trapdoor within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/yellow-glazed-terracotta.html">Yellow Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-copper-bulb.html">Exposed Copper Bulb</a></h3>
+  <p>Process recipe entry for Exposed Copper Bulb within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-cut-copper.html">Weathered Cut Copper</a></h3>
+  <p>Process recipe entry for Weathered Cut Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/acacia-sign.html">Acacia Sign</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/waxed-oxidized-cut-copper-stairs.html">Waxed Oxidized Cut Copper Stairs</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/waxed-cut-copper-stairs.html">Waxed Cut Copper Stairs</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/granite-slab.html">Granite Slab</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-copper-bulb.html">Weathered Copper Bulb</a></h3>
+  <p>Process recipe entry for Weathered Copper Bulb within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/black-dye.html">Black Dye</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/magenta-glazed-terracotta.html">Magenta Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/crying-obsidian.html">Crying Obsidian</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/black-glazed-terracotta.html">Black Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/green-glazed-terracotta.html">Green Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-copper-grate.html">Exposed Copper Grate</a></h3>
+  <p>Process recipe entry for Exposed Copper Grate within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-copper-door.html">Exposed Copper Door</a></h3>
+  <p>Process recipe entry for Exposed Copper Door within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/dark-prismarine-bit.html">Dark Prismarine Bit</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/sponge.html">Sponge</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-chiseled-copper.html">Oxidized Chiseled Copper</a></h3>
+  <p>Process recipe entry for Oxidized Chiseled Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/granite-stairs.html">Granite Stairs</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-cut-copper.html">Exposed Cut Copper</a></h3>
+  <p>Process recipe entry for Exposed Cut Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/acacia-hanging-sign.html">Acacia Hanging Sign</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/granite-wall.html">Granite Wall</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/magnetic-armor-trim.html">Magnetic Armor Trim</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span><span class="pill">Trim Pattern</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/red-sand.html">Red Sand</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/chipped-anvil.html">Chipped Anvil</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-copper-trapdoor.html">Weathered Copper Trapdoor</a></h3>
+  <p>Process recipe entry for Weathered Copper Trapdoor within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/glow-ink-sac.html">Glow Ink Sac</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/hazmat-armor-trim.html">Hazmat Armor Trim</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span><span class="pill">Trim Pattern</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-copper-grate.html">Weathered Copper Grate</a></h3>
+  <p>Process recipe entry for Weathered Copper Grate within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/quartz.html">Quartz</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/ink-sac.html">Ink Sac</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/iron-chain.html">Iron Chain</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-copper.html">Oxidized Copper</a></h3>
+  <p>Process recipe entry for Oxidized Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/anvil.html">Anvil</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-copper.html">Weathered Copper</a></h3>
+  <p>Process recipe entry for Weathered Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/mullermilch.html">M&#195;&#188;llermilch</a></h3>
+  <p>Radiation (-100 mSv)</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-copper-door.html">Oxidized Copper Door</a></h3>
+  <p>Process recipe entry for Oxidized Copper Door within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-copper-bulb.html">Oxidized Copper Bulb</a></h3>
+  <p>Process recipe entry for Oxidized Copper Bulb within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/purple-glazed-terracotta.html">Purple Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-copper-grate.html">Oxidized Copper Grate</a></h3>
+  <p>Process recipe entry for Oxidized Copper Grate within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-cut-copper.html">Oxidized Cut Copper</a></h3>
+  <p>Process recipe entry for Oxidized Cut Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/petrified-oak-slab.html">Petrified Oak Slab</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/andesite-stairs.html">Andesite Stairs</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-chiseled-copper.html">Weathered Chiseled Copper</a></h3>
+  <p>Process recipe entry for Weathered Chiseled Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/brown-glazed-terracotta.html">Brown Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/gray-glazed-terracotta.html">Gray Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-chiseled-copper.html">Exposed Chiseled Copper</a></h3>
+  <p>Process recipe entry for Exposed Chiseled Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/light-gray-glazed-terracotta.html">Light Gray Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/waxed-oxidized-copper-chain.html">Waxed Oxidized Copper Chain</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/exposed-copper.html">Exposed Copper</a></h3>
+  <p>Process recipe entry for Exposed Copper within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/lime-glazed-terracotta.html">Lime Glazed Terracotta</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/oxidized-copper-trapdoor.html">Oxidized Copper Trapdoor</a></h3>
+  <p>Process recipe entry for Oxidized Copper Trapdoor within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/loom.html">Loom</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/charcoal.html">Charcoal</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/weathered-copper-door.html">Weathered Copper Door</a></h3>
+  <p>Process recipe entry for Weathered Copper Door within TERF&#39;s material conversion chain.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/items-blocks/melon-slice.html">Melon Slice</a></h3>
+  <p>Craftable or processable TERF item/block detected from recipe data.</p>
+  <div class="catalog-meta">
+    <span>Items &amp; Blocks</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Recipe</span></div>
+</article>
+  </div>
+</section>
+<section class="doc-section" id="concepts-systems">
+  <h2>Concepts &amp; Systems</h2>
+  <p class="section-copy">Gameplay systems, scripted entities, advancements, and mechanics that define how the pack behaves.</p>
+  <div class="catalog-grid">
+    <article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/receptacle.html">Receptacle</a></h3>
+  <p>Scripted TERF concept implemented through 10 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/reaction-loss.html">Reactor Stall</a></h3>
+  <p>Experience the S.T.F.R going reaction loss</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/stone-plate.html">Stone Plate</a></h3>
+  <p>Scripted TERF concept implemented through 4 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/ant-man.html">Ant-Man!</a></h3>
+  <p>Use the Shrink Ray to become the minimum size</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/ender-chest.html">Cloud Storage</a></h3>
+  <p>Succesfully open an ender chest</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/nuke.html">Nuke</a></h3>
+  <p>Scripted TERF concept implemented through 8 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/player.html">Player</a></h3>
+  <p>Scripted TERF concept implemented through 190 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/gases.html">Gases</a></h3>
+  <p>Scripted TERF concept implemented through 4 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/opencore-complete.html">OpenCore Complete</a></h3>
+  <p>Shutdown the OpenCore</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/opencore-failure.html">OpenCore Failure</a></h3>
+  <p>Experience an OpenCore blowout</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/black-hole.html">Black Hole</a></h3>
+  <p>Scripted TERF concept implemented through 6 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/stfr-startup.html">All Systems Nominal</a></h3>
+  <p>Start the Stabilized Thermonuclear Fusion Reactor</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/mcfr-startup.html">Crude Fusion</a></h3>
+  <p>Start the Modular Catalyzed Fusion Reactor</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/shutdown-failure-restab.html">But at what cost...</a></h3>
+  <p>Manually restabilize the S.T.F.R Shutdown Failure, damaging equipment to oblivion.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/sculk-charge.html">Sculk Charge</a></h3>
+  <p>Scripted TERF concept implemented through 19 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/photon-ball.html">Photon Ball</a></h3>
+  <p>Scripted TERF concept implemented through 11 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/fallout.html">Fallout</a></h3>
+  <p>Scripted TERF concept implemented through 3 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/forbidden-microwave.html">The Forbidden Microwave</a></h3>
+  <p>Be Inside The S.T.F.R During Startup</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/shutdown-failure.html">Unstoppable Force VS Immovable Object</a></h3>
+  <p>Its... Its not... ITS NOT SHUTTING DOWN!</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/neutron.html">Neutron</a></h3>
+  <p>Scripted TERF concept implemented through 5 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/terf.html">TERF</a></h3>
+  <p>The icon of this advancement is a resource pack test!
 
-        <section class="doc-section" id="people-and-groups">
-          <h2>People And Groups</h2>
-          <p class="section-copy">
-            Character pages, organization pages, and relationship summaries can
-            live here once the wiki starts getting filled in for real.
-          </p>
-          <div class="entry-list">
-            <article class="entry">
-              <h3>Key Figure Placeholder</h3>
-              <p>
-                Use this for a central person profile with background, role,
-                notable actions, and links to connected pages.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Profile</span>
-                <span class="pill">Needs Sources</span>
-              </div>
-            </article>
-            <article class="entry">
-              <h3>Group Overview Placeholder</h3>
-              <p>
-                A future home for a group or faction summary, including goals,
-                major members, internal conflicts, and notable milestones.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Group</span>
-                <span class="pill">Cross-Reference</span>
-              </div>
-            </article>
-          </div>
-        </section>
+If you see a lava-ish looking block, the resource pack is working.
 
-        <section class="doc-section" id="locations">
-          <h2>Locations</h2>
-          <p class="section-copy">
-            Settings, places, hubs, and recurring environments can all be
-            indexed here with short summaries and later expanded into full pages.
-          </p>
-          <div class="entry-list">
-            <article class="entry">
-              <h3>Primary Setting</h3>
-              <p>
-                Placeholder copy for the main location page, covering why it
-                matters, who is connected to it, and what events happen there.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Location</span>
-                <span class="pill">Core Page</span>
-              </div>
-            </article>
-            <article class="entry">
-              <h3>Secondary Hub</h3>
-              <p>
-                A smaller location entry stub for spin-off spaces, regional
-                pages, or pages that support the main setting.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Location</span>
-                <span class="pill">Expandable</span>
-              </div>
-            </article>
-          </div>
-        </section>
+If you see a block with SHADER written on it, the resource pack is incompatible and you should report it.
 
-        <section class="doc-section" id="themes">
-          <h2>Themes</h2>
-          <p class="section-copy">
-            Theme pages can track recurring ideas, talking points, debates, or
-            motifs that show up across multiple articles.
-          </p>
-          <div class="entry-list">
-            <article class="entry">
-              <h3>Theme Cluster A</h3>
-              <p>
-                Placeholder copy for a topic index that ties together several
-                related articles under one shared concept.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Theme</span>
-                <span class="pill">Index Page</span>
-              </div>
-            </article>
-            <article class="entry">
-              <h3>Theme Cluster B</h3>
-              <p>
-                Another future cross-linking page for ideas that will probably
-                need summaries more than strict chronology.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Theme</span>
-                <span class="pill">Placeholder</span>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="doc-section" id="mod-templates">
-          <h2>Mod Templates</h2>
-          <p class="section-copy">
-            This section mirrors the part of the reference page you called out:
-            starter examples that can eventually become full end-to-end guides.
-          </p>
-          <div class="template-grid">
-            <article class="template-card">
-              <h3>Starter Article Template</h3>
-              <p>
-                A simple article layout with a summary block, key details,
-                source notes, and room for a short timeline.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Template</span>
-                <span class="pill">Easy Start</span>
-              </div>
-            </article>
-            <article class="template-card">
-              <h3>Timeline Deep Dive Template</h3>
-              <p>
-                A longer page pattern designed for event-heavy topics that need
-                chronology, context, and aftermath sections.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Template</span>
-                <span class="pill">Chronology</span>
-              </div>
-            </article>
-            <article class="template-card">
-              <h3>Person Profile Template</h3>
-              <p>
-                A profile scaffold with identity basics, role, alliances,
-                notable statements, and related pages.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Template</span>
-                <span class="pill">Profiles</span>
-              </div>
-            </article>
-            <article class="template-card">
-              <h3>Group Overview Template</h3>
-              <p>
-                A reusable page shell for organizations, communities, or teams,
-                with room for history, structure, and important disputes.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Template</span>
-                <span class="pill">Groups</span>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="doc-section" id="reference">
-          <h2>Reference</h2>
-          <p class="section-copy">
-            Quick lookup material belongs here: indexes, naming conventions,
-            source logs, and other utility pages.
-          </p>
-          <div class="entry-list">
-            <article class="entry">
-              <h3>Source Index</h3>
-              <p>
-                A future master list of citations, links, uploads, and notes so
-                the rest of the wiki can point back to a common source catalog.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Reference</span>
-                <span class="pill">Utilities</span>
-              </div>
-            </article>
-            <article class="entry">
-              <h3>Naming Conventions</h3>
-              <p>
-                A placeholder page for deciding how titles, tags, aliases, and
-                redirects should be written across the project.
-              </p>
-              <div class="meta-row">
-                <span class="pill">Reference</span>
-                <span class="pill">Editorial</span>
-              </div>
-            </article>
-          </div>
-        </section>
+If you see purple and black block the resource pack is not loaded.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/limbo.html">Limbo</a></h3>
+  <p>Scripted TERF concept implemented through 20 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/apply-impulse.html">Apply Impulse</a></h3>
+  <p>Custom TERF enchantment definition.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Enchantment</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/stfr-meltdown.html">Reactor Meltdown</a></h3>
+  <p>Experience the S.T.F.R going overload</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/quick-thinking.html">Quick Thinking</a></h3>
+  <p>Restabilize the S.T.F.R by repairing its stabilizers</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/missile.html">Missile</a></h3>
+  <p>Scripted TERF concept implemented through 6 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/sculk.html">Nothing Built Lasts Forever</a></h3>
+  <p>Come in contact with a stronger species of sculk</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/explosion.html">Explosion</a></h3>
+  <p>Scripted TERF concept implemented through 40 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/custom-button.html">Custom Button</a></h3>
+  <p>Scripted TERF concept implemented through 9 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/particle.html">Particle</a></h3>
+  <p>Scripted TERF concept implemented through 23 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/force-field.html">Force Field</a></h3>
+  <p>Custom TERF enchantment definition.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Enchantment</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/vehicle.html">Vehicle</a></h3>
+  <p>Scripted TERF concept implemented through 89 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/antimatter-explosion.html">Open Heimer</a></h3>
+  <p>Open an electromagnetic capsule completely filled with antimatter</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/glitch.html">[CONNECTION TERMINATED]</a></h3>
+  <p>Connection terminated. Im sorry to interrupt you, Elizabeth, if you still even remember that name, But Im afraid youve been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You dont even realize that you are trapped. Your lust for blood has driven you in endless circles, chasing the cries of children in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. None of you will. This is where your story ends. And to you, my brave volunteer, who somehow found this job listing not intended for you, although there was a way out planned for you, I have a feeling thats not what you want. I have a feeling that you are right where you want to be. I am remaining as well. I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fade away. As the agony of every tragedy should. And to you monsters trapped in the corridors, be still and give up your spirits. They dont belong to you. For most of you, I believe there is peace and perhaps more waiting for you after the smoke clears. Although, for one of you, the darkest pit of Hell has opened to swallow you whole, so dont keep the devil waiting, old friend. My daughter, if you can hear me, I knew you would return as well. Its in your nature to protect the innocent. Im sorry that on that day, the day you were shut out and left to die, no one was there to lift you up into their arms the way you lifted others into yours, and then, what became of you. I should have known you wouldnt be content to disappear, not my daughter. I couldnt save you then, so let me save you now. Its time to rest - for you, and for those you have carried in your arms. This ends for all of us. End communication.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/kilonova.html">Kilonova</a></h3>
+  <p>Scripted TERF concept implemented through 1 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/stfr-shutdown.html">Safely Stopped</a></h3>
+  <p>Experience the S.T.F.R&#39;s shutdown</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/mcfr-meltdown.html">CCFR</a></h3>
+  <p>Experience the MCFR detonation</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/orbital-strike.html">Orbital Strike</a></h3>
+  <p>Scripted TERF concept implemented through 12 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/meteor.html">Meteor</a></h3>
+  <p>Scripted TERF concept implemented through 12 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/ender-pearl.html">Ender Pearl</a></h3>
+  <p>Scripted TERF concept implemented through 2 function file(s) in the entity system.</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Function Directory</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/break-turret.html">Well That Backfired...</a></h3>
+  <p>Break an active security turret</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/second-chance.html">Second Chance</a></h3>
+  <p>Restabilize the S.T.F.R using the Stasis Laser</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/stfr-startup-failure.html">Unforeseen Consequences</a></h3>
+  <p>Experience an S.T.F.R startup failure</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/concepts-systems/opencore-startup.html">OpenCore Startup</a></h3>
+  <p>Start the OpenCore</p>
+  <div class="catalog-meta">
+    <span>Concepts &amp; Systems</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span></div>
+</article>
+  </div>
+</section>
+<section class="doc-section" id="hazards">
+  <h2>Hazards</h2>
+  <p class="section-copy">Custom damage sources, failure modes, and environmental threats.</p>
+  <div class="catalog-grid">
+    <article class="catalog-card">
+  <h3><a href="./entries/hazards/security-railgun.html">Security Railgun</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/nuclear-shockwave.html">Nuclear Shockwave</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/vaporisation.html">Vaporisation</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/radiation.html">Uranium Fever</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/antimatter-shockwave.html">Antimatter Shockwave</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/ender-chest-failure.html">Ender Chest Failure</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/tau-cannon.html">Tau Cannon</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/depressurization.html">Depressurization</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/security-drone.html">Security Drone</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/high-voltage.html">High Voltage</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/shockwave.html">Shockwave</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/crush.html">Crush</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/warp-field.html">Warp Field</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/antimatter.html">It Dosent Matter</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Advancement</span><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/reactor.html">Reactor</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/ban-hammer.html">Ban Hammer</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/no-oxygen.html">No Oxygen</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/electron-shockwave.html">Electron Shockwave</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/hazards/bleeding.html">Bleeding</a></h3>
+  <p>Custom TERF damage source used by pack mechanics, failures, or environmental effects.</p>
+  <div class="catalog-meta">
+    <span>Hazards</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Damage Type</span></div>
+</article>
+  </div>
+</section>
+<section class="doc-section" id="world-dimensions">
+  <h2>World &amp; Dimensions</h2>
+  <p class="section-copy">Dimensions, biomes, and timeline definitions that shape TERF&#39;s spaces.</p>
+  <div class="catalog-grid">
+    <article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/sculk-wasteland.html">Sculk Wasteland</a></h3>
+  <p>Custom TERF biome definition used by the pack&#39;s dimensions or worldgen rules.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Biome</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/intermediary-technical-storage-dimension.html">Intermediary Technical Storage Dimension</a></h3>
+  <p>Custom TERF dimension definition detected in the pack&#39;s world data.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Dimension</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/orbit-end.html">Orbit End</a></h3>
+  <p>Custom TERF biome definition used by the pack&#39;s dimensions or worldgen rules.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Dimension</span><span class="pill">Biome</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/orbit-earth.html">Orbit Earth</a></h3>
+  <p>Custom TERF biome definition used by the pack&#39;s dimensions or worldgen rules.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>2 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Dimension</span><span class="pill">Biome</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/moon.html">Moon</a></h3>
+  <p>Timeline definition controlling visual or temporal behavior in TERF spaces.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Timeline</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/warp-interdimensional.html">Warp Interdimensional</a></h3>
+  <p>Custom TERF biome definition used by the pack&#39;s dimensions or worldgen rules.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Biome</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/nuclear-wasteland.html">Nuclear Wasteland</a></h3>
+  <p>Custom TERF biome definition used by the pack&#39;s dimensions or worldgen rules.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Biome</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/world-dimensions/space.html">Space</a></h3>
+  <p>Timeline definition controlling visual or temporal behavior in TERF spaces.</p>
+  <div class="catalog-meta">
+    <span>World &amp; Dimensions</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Timeline</span></div>
+</article>
+  </div>
+</section>
+<section class="doc-section" id="media-cosmetics">
+  <h2>Media &amp; Cosmetics</h2>
+  <p class="section-copy">Trim patterns, paintings, and jukebox songs included in the pack.</p>
+  <div class="catalog-grid">
+    <article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/maki-lagon-somebody-sus.html">Maki Lagon Somebody Sus</a></h3>
+  <p>Jukebox song registered by the TERF pack.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Jukebox Song</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/if-you-see-this-pls-make-more-and-do-a-pull-request.html">If You See This Pls Make More And Do A Pull Request</a></h3>
+  <p>Painting variant bundled with the TERF content set.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Painting</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/aviators-sweet-dreams.html">Aviators - Sweet Dreams</a></h3>
+  <p>Jukebox song registered by the TERF pack.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Jukebox Song</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/black-mesa-weve-got-hostiles-remix.html">Black Mesa - We&#39;ve Got Hostiles Remix</a></h3>
+  <p>Jukebox song registered by the TERF pack.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Jukebox Song</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/linkin-park-in-the-end.html">Linkin Park In The End</a></h3>
+  <p>Jukebox song registered by the TERF pack.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Jukebox Song</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/dimrain47-at-the-speed-of-light.html">Dimrain47 At The Speed Of Light</a></h3>
+  <p>Jukebox song registered by the TERF pack.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Jukebox Song</span></div>
+</article>
+<article class="catalog-card">
+  <h3><a href="./entries/media-cosmetics/hazard-triangle.html">Hazard Triangle</a></h3>
+  <p>Painting variant bundled with the TERF content set.</p>
+  <div class="catalog-meta">
+    <span>Media &amp; Cosmetics</span>
+    <span>1 source ref(s)</span>
+  </div>
+  <div class="meta-row"><span class="pill">Painting</span></div>
+</article>
+  </div>
+</section>
       </main>
 
       <aside class="page-outline">
-        <p class="outline-title">On This Page</p>
+        <p class="outline-title">Source</p>
         <p class="outline-copy">
-          This mini outline keeps the page feeling like a proper docs hub.
+          Generated from <code>ref/terf</code> using recipes, advancements, dimensions, timelines, damage types, machine function trees, and media registries.
         </p>
-        <nav class="outline-nav" aria-label="Page outline">
-          <a href="#overview">Overview</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#people-and-groups">People And Groups</a>
-          <a href="#locations">Locations</a>
-          <a href="#themes">Themes</a>
-          <a href="#mod-templates">Mod Templates</a>
-          <a href="#reference">Reference</a>
-        </nav>
       </aside>
     </div>
   </body>

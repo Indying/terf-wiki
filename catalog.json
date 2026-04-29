@@ -1,0 +1,4300 @@
+﻿[
+    {
+        "title":  "Exposed Copper Trapdoor",
+        "slug":  "exposed-copper-trapdoor",
+        "key":  "exposed_copper_trapdoor",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Copper Trapdoor within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_copper_trapdoor_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "exposed_copper"
+                    ]
+    },
+    {
+        "title":  "Sculk Wasteland",
+        "slug":  "sculk-wasteland",
+        "key":  "sculk_wasteland",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Biome"
+                        ],
+        "summary":  "Custom TERF biome definition used by the pack\u0027s dimensions or worldgen rules.",
+        "sourceFiles":  [
+                            "ref/terf/worldgen/biome/sculk_wasteland.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "sculk"
+                    ]
+    },
+    {
+        "title":  "Conveyor",
+        "slug":  "conveyor",
+        "key":  "conveyor",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 4 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/conveyor"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Fluid Pump",
+        "slug":  "fluid-pump",
+        "key":  "fluid_pump",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fluid_pump"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Receptacle",
+        "slug":  "receptacle",
+        "key":  "receptacle",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 10 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/receptacle"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Yellow Glazed Terracotta",
+        "slug":  "yellow-glazed-terracotta",
+        "key":  "yellow_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/caution_block.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Exposed Copper Bulb",
+        "slug":  "exposed-copper-bulb",
+        "key":  "exposed_copper_bulb",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Copper Bulb within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_copper_bulb_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "exposed_copper"
+                    ]
+    },
+    {
+        "title":  "Reactor Stall",
+        "slug":  "reaction-loss",
+        "key":  "reaction_loss",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Experience the S.T.F.R going reaction loss",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/reaction_loss.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Stone Plate",
+        "slug":  "stone-plate",
+        "key":  "stone_plate",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 4 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/stone_plate"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Turbine Medium",
+        "slug":  "turbine-medium",
+        "key":  "turbine_medium",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 6 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/turbine_medium"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Weathered Cut Copper",
+        "slug":  "weathered-cut-copper",
+        "key":  "weathered_cut_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Cut Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_cut_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Block Breaker",
+        "slug":  "block-breaker",
+        "key":  "block_breaker",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 4 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/block_breaker"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Maki Lagon Somebody Sus",
+        "slug":  "maki-lagon-somebody-sus",
+        "key":  "maki_lagon_somebody_sus",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Jukebox Song"
+                        ],
+        "summary":  "Jukebox song registered by the TERF pack.",
+        "sourceFiles":  [
+                            "ref/terf/jukebox_song/maki_lagon_somebody_sus.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Acacia Sign",
+        "slug":  "acacia-sign",
+        "key":  "acacia_sign",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/screen.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Ant-Man!",
+        "slug":  "ant-man",
+        "key":  "ant_man",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Use the Shrink Ray to become the minimum size",
+        "sourceFiles":  [
+                            "ref/terf/advancement/fabricator/ant_man.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "fabricator"
+                    ]
+    },
+    {
+        "title":  "Cloud Storage",
+        "slug":  "ender-chest",
+        "key":  "ender_chest",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Succesfully open an ender chest",
+        "sourceFiles":  [
+                            "ref/terf/advancement/ender_chest.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "ender_chest_failure"
+                    ]
+    },
+    {
+        "title":  "If You See This Pls Make More And Do A Pull Request",
+        "slug":  "if-you-see-this-pls-make-more-and-do-a-pull-request",
+        "key":  "if_you_see_this_pls_make_more_and_do_a_pull_request",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Painting"
+                        ],
+        "summary":  "Painting variant bundled with the TERF content set.",
+        "sourceFiles":  [
+                            "ref/terf/painting_variant/if_you_see_this_pls_make_more_and_do_a_pull_request"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Security Railgun",
+        "slug":  "security-railgun",
+        "key":  "security_railgun",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/security_railgun.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Large Fluid Solidifier",
+        "slug":  "large-fluid-solidifier",
+        "key":  "large_fluid_solidifier",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 8 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/large_fluid_solidifier"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Waxed Oxidized Cut Copper Stairs",
+        "slug":  "waxed-oxidized-cut-copper-stairs",
+        "key":  "waxed_oxidized_cut_copper_stairs",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/waxed_oxidized_cut_copper_stairs.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Rolling Mill",
+        "slug":  "rolling-mill",
+        "key":  "rolling_mill",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 6 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/rolling_mill"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Nuke",
+        "slug":  "nuke",
+        "key":  "nuke",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 8 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/nuke"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Waxed Cut Copper Stairs",
+        "slug":  "waxed-cut-copper-stairs",
+        "key":  "waxed_cut_copper_stairs",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/waxed_cut_copper_stairs.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Player",
+        "slug":  "player",
+        "key":  "player",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 190 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/player"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Granite Slab",
+        "slug":  "granite-slab",
+        "key":  "granite_slab",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/high_voltage_conductor_slab.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Nuclear Shockwave",
+        "slug":  "nuclear-shockwave",
+        "key":  "nuclear_shockwave",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/nuclear_shockwave.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Weathered Copper Bulb",
+        "slug":  "weathered-copper-bulb",
+        "key":  "weathered_copper_bulb",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Copper Bulb within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_copper_bulb_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "weathered_copper"
+                    ]
+    },
+    {
+        "title":  "Gases",
+        "slug":  "gases",
+        "key":  "gases",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 4 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/gases"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Black Dye",
+        "slug":  "black-dye",
+        "key":  "black_dye",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/black_dye.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Magenta Glazed Terracotta",
+        "slug":  "magenta-glazed-terracotta",
+        "key":  "magenta_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/entity_conveyor.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Crying Obsidian",
+        "slug":  "crying-obsidian",
+        "key":  "crying_obsidian",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/crying_obsidian.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Chunk Loader",
+        "slug":  "chunk-loader",
+        "key":  "chunk_loader",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 7 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/chunk_loader"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Fission Sensor",
+        "slug":  "fission-sensor",
+        "key":  "fission_sensor",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fission_sensor"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Vaporisation",
+        "slug":  "vaporisation",
+        "key":  "vaporisation",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/vaporisation.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Uranium Fever",
+        "slug":  "radiation",
+        "key":  "radiation",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Concepts \u0026 Systems",
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Advancement",
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/radiation.json",
+                            "ref/terf/damage_type/radiation.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Black Glazed Terracotta",
+        "slug":  "black-glazed-terracotta",
+        "key":  "black_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/waxed_oxidized_cut_copper_vertical_stairs.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "OpenCore Complete",
+        "slug":  "opencore-complete",
+        "key":  "opencore_complete",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Shutdown the OpenCore",
+        "sourceFiles":  [
+                            "ref/terf/advancement/opencore/opencore_complete.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "opencore"
+                    ]
+    },
+    {
+        "title":  "Green Glazed Terracotta",
+        "slug":  "green-glazed-terracotta",
+        "key":  "green_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/vent_block.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "OpenCore Failure",
+        "slug":  "opencore-failure",
+        "key":  "opencore_failure",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Experience an OpenCore blowout",
+        "sourceFiles":  [
+                            "ref/terf/advancement/opencore/opencore_failure.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "opencore"
+                    ]
+    },
+    {
+        "title":  "Arc Furnace",
+        "slug":  "arc-furnace",
+        "key":  "arc_furnace",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/arc_furnace"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Antimatter Shockwave",
+        "slug":  "antimatter-shockwave",
+        "key":  "antimatter_shockwave",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/antimatter_shockwave.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "antimatter"
+                    ]
+    },
+    {
+        "title":  "Ender Chest Failure",
+        "slug":  "ender-chest-failure",
+        "key":  "ender_chest_failure",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/ender_chest_failure.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "ender_chest"
+                    ]
+    },
+    {
+        "title":  "Exposed Copper Grate",
+        "slug":  "exposed-copper-grate",
+        "key":  "exposed_copper_grate",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Copper Grate within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_copper_grate_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "exposed_copper"
+                    ]
+    },
+    {
+        "title":  "Fabricator",
+        "slug":  "fabricator",
+        "key":  "fabricator",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Advancement"
+                        ],
+        "summary":  "Machine logic implemented through 8 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/fabricator/fabricator.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fabricator"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Black Hole",
+        "slug":  "black-hole",
+        "key":  "black_hole",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 6 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/black_hole"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Intermediary Technical Storage Dimension",
+        "slug":  "intermediary-technical-storage-dimension",
+        "key":  "intermediary_technical_storage_dimension",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Dimension"
+                        ],
+        "summary":  "Custom TERF dimension definition detected in the pack\u0027s world data.",
+        "sourceFiles":  [
+                            "ref/terf/dimension/intermediary_technical_storage_dimension.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Turbine Large",
+        "slug":  "turbine-large",
+        "key":  "turbine_large",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 10 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/turbine_large"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "All Systems Nominal",
+        "slug":  "stfr-startup",
+        "key":  "stfr_startup",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Start the Stabilized Thermonuclear Fusion Reactor",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/stfr_startup.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr",
+                        "stfr_startup_failure"
+                    ]
+    },
+    {
+        "title":  "Tau Cannon",
+        "slug":  "tau-cannon",
+        "key":  "tau_cannon",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/tau_cannon.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Crude Fusion",
+        "slug":  "mcfr-startup",
+        "key":  "mcfr_startup",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Start the Modular Catalyzed Fusion Reactor",
+        "sourceFiles":  [
+                            "ref/terf/advancement/mcfr/mcfr_startup.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "mcfr"
+                    ]
+    },
+    {
+        "title":  "Exposed Copper Door",
+        "slug":  "exposed-copper-door",
+        "key":  "exposed_copper_door",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Copper Door within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_copper_door_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "exposed_copper"
+                    ]
+    },
+    {
+        "title":  "But at what cost...",
+        "slug":  "shutdown-failure-restab",
+        "key":  "shutdown_failure_restab",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Manually restabilize the S.T.F.R Shutdown Failure, damaging equipment to oblivion.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/shutdown_failure_restab.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr",
+                        "shutdown_failure"
+                    ]
+    },
+    {
+        "title":  "Dark Prismarine Bit",
+        "slug":  "dark-prismarine-bit",
+        "key":  "dark_prismarine_bit",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/dark_prismarine_bit.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Sculk Charge",
+        "slug":  "sculk-charge",
+        "key":  "sculk_charge",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 19 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/sculk_charge"
+                       ],
+        "related":  [
+                        "sculk"
+                    ]
+    },
+    {
+        "title":  "Sponge",
+        "slug":  "sponge",
+        "key":  "sponge",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/sponge.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Gear Elevator",
+        "slug":  "gear-elevator",
+        "key":  "gear_elevator",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 23 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/gear_elevator"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "MCFR",
+        "slug":  "mcfr",
+        "key":  "mcfr",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 36 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/mcfr"
+                       ],
+        "related":  [
+                        "mcfr_meltdown",
+                        "mcfr_startup"
+                    ]
+    },
+    {
+        "title":  "Oxidized Chiseled Copper",
+        "slug":  "oxidized-chiseled-copper",
+        "key":  "oxidized_chiseled_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Chiseled Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_chiseled_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "STFR Control Panel",
+        "slug":  "stfr-control-panel",
+        "key":  "stfr_control_panel",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 39 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/stfr_control_panel"
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Granite Stairs",
+        "slug":  "granite-stairs",
+        "key":  "granite_stairs",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/high_voltage_conductor_stairs.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Exposed Cut Copper",
+        "slug":  "exposed-cut-copper",
+        "key":  "exposed_cut_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Cut Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_cut_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Photon Ball",
+        "slug":  "photon-ball",
+        "key":  "photon_ball",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 11 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/photon_ball"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Acacia Hanging Sign",
+        "slug":  "acacia-hanging-sign",
+        "key":  "acacia_hanging_sign",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/hanging_screen.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "EBF",
+        "slug":  "ebf",
+        "key":  "ebf",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 6 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/ebf"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Fission Reactor",
+        "slug":  "fission-reactor",
+        "key":  "fission_reactor",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 8 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fission_reactor"
+                       ],
+        "related":  [
+                        "fission_reactor_panel"
+                    ]
+    },
+    {
+        "title":  "Ore Drill",
+        "slug":  "ore-drill",
+        "key":  "ore_drill",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/ore_drill"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Granite Wall",
+        "slug":  "granite-wall",
+        "key":  "granite_wall",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/high_voltage_conductor_wall.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Deuterium Concentrator",
+        "slug":  "deuterium-concentrator",
+        "key":  "deuterium_concentrator",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/deuterium_concentrator"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Depressurization",
+        "slug":  "depressurization",
+        "key":  "depressurization",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/depressurization.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Pressurizer",
+        "slug":  "pressurizer",
+        "key":  "pressurizer",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 15 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/pressurizer"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Wet Mill",
+        "slug":  "wet-mill",
+        "key":  "wet_mill",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/wet_mill"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Aviators - Sweet Dreams",
+        "slug":  "aviators-sweet-dreams",
+        "key":  "aviators_sweet_dreams",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Jukebox Song"
+                        ],
+        "summary":  "Jukebox song registered by the TERF pack.",
+        "sourceFiles":  [
+                            "ref/terf/jukebox_song/aviators_sweet_dreams.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Crusher",
+        "slug":  "crusher",
+        "key":  "crusher",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/crusher"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Variable Resistor",
+        "slug":  "variable-resistor",
+        "key":  "variable_resistor",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 1 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/variable_resistor"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Fallout",
+        "slug":  "fallout",
+        "key":  "fallout",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 3 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/fallout"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Charging Station",
+        "slug":  "charging-station",
+        "key":  "charging_station",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/charging_station"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Magnetic Armor Trim",
+        "slug":  "magnetic-armor-trim",
+        "key":  "magnetic_armor_trim",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks",
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Recipe",
+                            "Trim Pattern"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/magnetic_armor_trim.json",
+                            "ref/terf/trim_pattern/magnetic_armor_trim.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Assembler",
+        "slug":  "assembler",
+        "key":  "assembler",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 17 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/assembler"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "The Forbidden Microwave",
+        "slug":  "forbidden-microwave",
+        "key":  "forbidden_microwave",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Be Inside The S.T.F.R During Startup",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/forbidden_microwave.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Multi Piston",
+        "slug":  "multi-piston",
+        "key":  "multi_piston",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 9 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/multi_piston"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Orbit End",
+        "slug":  "orbit-end",
+        "key":  "orbit_end",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Dimension",
+                            "Biome"
+                        ],
+        "summary":  "Custom TERF biome definition used by the pack\u0027s dimensions or worldgen rules.",
+        "sourceFiles":  [
+                            "ref/terf/dimension/orbit_end.json",
+                            "ref/terf/worldgen/biome/orbit_end.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Unstoppable Force VS Immovable Object",
+        "slug":  "shutdown-failure",
+        "key":  "shutdown_failure",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Its... Its not... ITS NOT SHUTTING DOWN!",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/shutdown_failure.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr",
+                        "shutdown_failure_restab"
+                    ]
+    },
+    {
+        "title":  "Crane",
+        "slug":  "crane",
+        "key":  "crane",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 22 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/crane"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Neutron",
+        "slug":  "neutron",
+        "key":  "neutron",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 5 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/neutron"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "TERF",
+        "slug":  "terf",
+        "key":  "terf",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "The icon of this advancement is a resource pack test!\n\nIf you see a lava-ish looking block, the resource pack is working.\n\nIf you see a block with SHADER written on it, the resource pack is incompatible and you should report it.\n\nIf you see purple and black block the resource pack is not loaded.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/terf.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Limbo",
+        "slug":  "limbo",
+        "key":  "limbo",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 20 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/limbo"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Red Sand",
+        "slug":  "red-sand",
+        "key":  "red_sand",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/red_sand.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Security Drone",
+        "slug":  "security-drone",
+        "key":  "security_drone",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/security_drone.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Black Mesa - We\u0027ve Got Hostiles Remix",
+        "slug":  "black-mesa-weve-got-hostiles-remix",
+        "key":  "black_mesa_weve_got_hostiles_remix",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Jukebox Song"
+                        ],
+        "summary":  "Jukebox song registered by the TERF pack.",
+        "sourceFiles":  [
+                            "ref/terf/jukebox_song/black_mesa_weve_got_hostiles_remix.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Orbit Earth",
+        "slug":  "orbit-earth",
+        "key":  "orbit_earth",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Dimension",
+                            "Biome"
+                        ],
+        "summary":  "Custom TERF biome definition used by the pack\u0027s dimensions or worldgen rules.",
+        "sourceFiles":  [
+                            "ref/terf/dimension/orbit_earth.json",
+                            "ref/terf/worldgen/biome/orbit_earth.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Apply Impulse",
+        "slug":  "apply-impulse",
+        "key":  "apply_impulse",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Enchantment"
+                        ],
+        "summary":  "Custom TERF enchantment definition.",
+        "sourceFiles":  [
+                            "ref/terf/enchantment/apply_impulse.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Warp Core",
+        "slug":  "warp-core",
+        "key":  "warp_core",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Advancement"
+                        ],
+        "summary":  "Machine logic implemented through 46 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/warp_core.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/warp_core"
+                       ],
+        "related":  [
+                        "warp_core_panel"
+                    ]
+    },
+    {
+        "title":  "Chipped Anvil",
+        "slug":  "chipped-anvil",
+        "key":  "chipped_anvil",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/chipped_anvil.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "OpenCore",
+        "slug":  "opencore",
+        "key":  "opencore",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 47 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/opencore"
+                       ],
+        "related":  [
+                        "opencore_control_panel",
+                        "opencore_startup",
+                        "opencore_failure",
+                        "opencore_complete"
+                    ]
+    },
+    {
+        "title":  "Reactor Meltdown",
+        "slug":  "stfr-meltdown",
+        "key":  "stfr_meltdown",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Experience the S.T.F.R going overload",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/stfr_meltdown.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Weathered Copper Trapdoor",
+        "slug":  "weathered-copper-trapdoor",
+        "key":  "weathered_copper_trapdoor",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Copper Trapdoor within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_copper_trapdoor_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "weathered_copper"
+                    ]
+    },
+    {
+        "title":  "Glow Ink Sac",
+        "slug":  "glow-ink-sac",
+        "key":  "glow_ink_sac",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/glow_ink_sac.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Hazmat Armor Trim",
+        "slug":  "hazmat-armor-trim",
+        "key":  "hazmat_armor_trim",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks",
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Recipe",
+                            "Trim Pattern"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/hazmat_armor_trim.json",
+                            "ref/terf/trim_pattern/hazmat_armor_trim.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Quick Thinking",
+        "slug":  "quick-thinking",
+        "key":  "quick_thinking",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Restabilize the S.T.F.R by repairing its stabilizers",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/quick_thinking.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Missile",
+        "slug":  "missile",
+        "key":  "missile",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 6 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/missile"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Weathered Copper Grate",
+        "slug":  "weathered-copper-grate",
+        "key":  "weathered_copper_grate",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Copper Grate within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_copper_grate_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "weathered_copper"
+                    ]
+    },
+    {
+        "title":  "Fission Fuel Loader",
+        "slug":  "fission-fuel-loader",
+        "key":  "fission_fuel_loader",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 7 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fission_fuel_loader"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Linkin Park In The End",
+        "slug":  "linkin-park-in-the-end",
+        "key":  "linkin_park_in_the_end",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Jukebox Song"
+                        ],
+        "summary":  "Jukebox song registered by the TERF pack.",
+        "sourceFiles":  [
+                            "ref/terf/jukebox_song/linkin_park_in_the_end.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Nothing Built Lasts Forever",
+        "slug":  "sculk",
+        "key":  "sculk",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Come in contact with a stronger species of sculk",
+        "sourceFiles":  [
+                            "ref/terf/advancement/sculk.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "sculk_wasteland",
+                        "sculk_charge"
+                    ]
+    },
+    {
+        "title":  "Lamp Controller",
+        "slug":  "lamp-controller",
+        "key":  "lamp_controller",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 10 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/lamp_controller"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "High Voltage",
+        "slug":  "high-voltage",
+        "key":  "high_voltage",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/high_voltage.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Fluid Tank",
+        "slug":  "fluid-tank",
+        "key":  "fluid_tank",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 11 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fluid_tank"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Breakers",
+        "slug":  "breakers",
+        "key":  "breakers",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 8 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/breakers"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Shockwave",
+        "slug":  "shockwave",
+        "key":  "shockwave",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/shockwave.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Quartz",
+        "slug":  "quartz",
+        "key":  "quartz",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/quartz.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Ink Sac",
+        "slug":  "ink-sac",
+        "key":  "ink_sac",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/ink_sac.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Magma Drill",
+        "slug":  "magma-drill",
+        "key":  "magma_drill",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/magma_drill"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Battery Array",
+        "slug":  "battery-array",
+        "key":  "battery_array",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 12 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/battery_array"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Iron Chain",
+        "slug":  "iron-chain",
+        "key":  "iron_chain",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/high_voltage_wire.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Oxidized Copper",
+        "slug":  "oxidized-copper",
+        "key":  "oxidized_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "oxidized_copper_bulb",
+                        "oxidized_copper_door",
+                        "oxidized_copper_grate",
+                        "oxidized_copper_trapdoor"
+                    ]
+    },
+    {
+        "title":  "Crush",
+        "slug":  "crush",
+        "key":  "crush",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/crush.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Explosion",
+        "slug":  "explosion",
+        "key":  "explosion",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 40 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/explosion"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Anvil",
+        "slug":  "anvil",
+        "key":  "anvil",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/anvil.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Fission Reactor Panel",
+        "slug":  "fission-reactor-panel",
+        "key":  "fission_reactor_panel",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 2 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/fission_reactor_panel"
+                       ],
+        "related":  [
+                        "fission_reactor"
+                    ]
+    },
+    {
+        "title":  "Custom Button",
+        "slug":  "custom-button",
+        "key":  "custom_button",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 9 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/custom_button"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "OpenCore Control Panel",
+        "slug":  "opencore-control-panel",
+        "key":  "opencore_control_panel",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 20 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/opencore_control_panel"
+                       ],
+        "related":  [
+                        "opencore"
+                    ]
+    },
+    {
+        "title":  "Weathered Copper",
+        "slug":  "weathered-copper",
+        "key":  "weathered_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "weathered_copper_grate",
+                        "weathered_copper_door",
+                        "weathered_copper_bulb",
+                        "weathered_copper_trapdoor"
+                    ]
+    },
+    {
+        "title":  "MÃ¼llermilch",
+        "slug":  "mullermilch",
+        "key":  "mullermilch",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Radiation (-100 mSv)",
+        "sourceFiles":  [
+                            "ref/terf/recipe/mullermilch.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Dimrain47 At The Speed Of Light",
+        "slug":  "dimrain47-at-the-speed-of-light",
+        "key":  "dimrain47_at_the_speed_of_light",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Jukebox Song"
+                        ],
+        "summary":  "Jukebox song registered by the TERF pack.",
+        "sourceFiles":  [
+                            "ref/terf/jukebox_song/dimrain47_at_the_speed_of_light.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Warp Field",
+        "slug":  "warp-field",
+        "key":  "warp_field",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/warp_field.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "It Dosent Matter",
+        "slug":  "antimatter",
+        "key":  "antimatter",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Concepts \u0026 Systems",
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Advancement",
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/antimatter.json",
+                            "ref/terf/damage_type/antimatter.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "antimatter_explosion",
+                        "antimatter_shockwave"
+                    ]
+    },
+    {
+        "title":  "Oxidized Copper Door",
+        "slug":  "oxidized-copper-door",
+        "key":  "oxidized_copper_door",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Copper Door within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_copper_door_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "oxidized_copper"
+                    ]
+    },
+    {
+        "title":  "Oxidized Copper Bulb",
+        "slug":  "oxidized-copper-bulb",
+        "key":  "oxidized_copper_bulb",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Copper Bulb within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_copper_bulb_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "oxidized_copper"
+                    ]
+    },
+    {
+        "title":  "Particle",
+        "slug":  "particle",
+        "key":  "particle",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 23 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/particle"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Purifier",
+        "slug":  "purifier",
+        "key":  "purifier",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/purifier"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Dev Block",
+        "slug":  "dev-block",
+        "key":  "dev_block",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 1 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/dev_block"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Purple Glazed Terracotta",
+        "slug":  "purple-glazed-terracotta",
+        "key":  "purple_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/control_rod_assembly.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Force Field",
+        "slug":  "force-field",
+        "key":  "force_field",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Enchantment"
+                        ],
+        "summary":  "Custom TERF enchantment definition.",
+        "sourceFiles":  [
+                            "ref/terf/enchantment/force_field.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Oxidized Copper Grate",
+        "slug":  "oxidized-copper-grate",
+        "key":  "oxidized_copper_grate",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Copper Grate within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_copper_grate_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "oxidized_copper"
+                    ]
+    },
+    {
+        "title":  "Vehicle",
+        "slug":  "vehicle",
+        "key":  "vehicle",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 89 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/vehicle"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "STFR",
+        "slug":  "stfr",
+        "key":  "stfr",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 314 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/stfr"
+                       ],
+        "related":  [
+                        "stfr_startup_failure",
+                        "stfr_shutdown",
+                        "stfr_startup",
+                        "stfr_meltdown",
+                        "stfr_control_panel"
+                    ]
+    },
+    {
+        "title":  "Capsule Interface",
+        "slug":  "capsule-interface",
+        "key":  "capsule_interface",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 11 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/capsule_interface"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Open Heimer",
+        "slug":  "antimatter-explosion",
+        "key":  "antimatter_explosion",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Open an electromagnetic capsule completely filled with antimatter",
+        "sourceFiles":  [
+                            "ref/terf/advancement/antimatter_explosion.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "antimatter"
+                    ]
+    },
+    {
+        "title":  "Oxidized Cut Copper",
+        "slug":  "oxidized-cut-copper",
+        "key":  "oxidized_cut_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Cut Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_cut_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "[CONNECTION TERMINATED]",
+        "slug":  "glitch",
+        "key":  "glitch",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Connection terminated. Im sorry to interrupt you, Elizabeth, if you still even remember that name, But Im afraid youve been misinformed. You are not here to receive a gift, nor have you been called here by the individual you assume, although, you have indeed been called. You have all been called here, into a labyrinth of sounds and smells, misdirection and misfortune. A labyrinth with no exit, a maze with no prize. You dont even realize that you are trapped. Your lust for blood has driven you in endless circles, chasing the cries of children in some unseen chamber, always seeming so near, yet somehow out of reach, but you will never find them. None of you will. This is where your story ends. And to you, my brave volunteer, who somehow found this job listing not intended for you, although there was a way out planned for you, I have a feeling thats not what you want. I have a feeling that you are right where you want to be. I am remaining as well. I am nearby. This place will not be remembered, and the memory of everything that started this can finally begin to fade away. As the agony of every tragedy should. And to you monsters trapped in the corridors, be still and give up your spirits. They dont belong to you. For most of you, I believe there is peace and perhaps more waiting for you after the smoke clears. Although, for one of you, the darkest pit of Hell has opened to swallow you whole, so dont keep the devil waiting, old friend. My daughter, if you can hear me, I knew you would return as well. Its in your nature to protect the innocent. Im sorry that on that day, the day you were shut out and left to die, no one was there to lift you up into their arms the way you lifted others into yours, and then, what became of you. I should have known you wouldnt be content to disappear, not my daughter. I couldnt save you then, so let me save you now. Its time to rest - for you, and for those you have carried in your arms. This ends for all of us. End communication.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/glitch.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Petrified Oak Slab",
+        "slug":  "petrified-oak-slab",
+        "key":  "petrified_oak_slab",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/copper_coil.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Mainframe",
+        "slug":  "mainframe",
+        "key":  "mainframe",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Advancement"
+                        ],
+        "summary":  "Machine logic implemented through 26 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/mainframe.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/mainframe"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Moon",
+        "slug":  "moon",
+        "key":  "moon",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Timeline"
+                        ],
+        "summary":  "Timeline definition controlling visual or temporal behavior in TERF spaces.",
+        "sourceFiles":  [
+                            "ref/terf/timeline/moon.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Kilonova",
+        "slug":  "kilonova",
+        "key":  "kilonova",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 1 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/kilonova"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Redstone Probe",
+        "slug":  "redstone-probe",
+        "key":  "redstone_probe",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/redstone_probe"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Andesite Stairs",
+        "slug":  "andesite-stairs",
+        "key":  "andesite_stairs",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/copper_coil_stairs.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Hadron Collider",
+        "slug":  "hadron-collider",
+        "key":  "hadron_collider",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Advancement",
+                            "Damage Type"
+                        ],
+        "summary":  "Machine logic implemented through 24 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/hadron_collider.json",
+                            "ref/terf/damage_type/hadron_collider.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/hadron_collider"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Multiblock Core",
+        "slug":  "multiblock-core",
+        "key":  "multiblock_core",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Items \u0026 Blocks",
+                           "Concepts \u0026 Systems",
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Recipe",
+                            "Advancement"
+                        ],
+        "summary":  "Craft your first multiblock core using the recipe book",
+        "sourceFiles":  [
+                            "ref/terf/recipe/multiblock_core.json",
+                            "ref/terf/advancement/multiblock_core.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Weathered Chiseled Copper",
+        "slug":  "weathered-chiseled-copper",
+        "key":  "weathered_chiseled_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Chiseled Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_chiseled_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Safely Stopped",
+        "slug":  "stfr-shutdown",
+        "key":  "stfr_shutdown",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Experience the S.T.F.R\u0027s shutdown",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/stfr_shutdown.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Brown Glazed Terracotta",
+        "slug":  "brown-glazed-terracotta",
+        "key":  "brown_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/metal_plating.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Security Turret",
+        "slug":  "security-turret",
+        "key":  "security_turret",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Damage Type"
+                        ],
+        "summary":  "Machine logic implemented through 16 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/security_turret.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/security_turret"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "CCFR",
+        "slug":  "mcfr-meltdown",
+        "key":  "mcfr_meltdown",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Experience the MCFR detonation",
+        "sourceFiles":  [
+                            "ref/terf/advancement/mcfr/mcfr_meltdown.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "mcfr"
+                    ]
+    },
+    {
+        "title":  "Block Placer",
+        "slug":  "block-placer",
+        "key":  "block_placer",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 4 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/block_placer"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Security Terminal",
+        "slug":  "security-terminal",
+        "key":  "security_terminal",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 18 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/security_terminal"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Reactor",
+        "slug":  "reactor",
+        "key":  "reactor",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/reactor.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Ban Hammer",
+        "slug":  "ban-hammer",
+        "key":  "ban_hammer",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/ban_hammer.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Stasis Laser",
+        "slug":  "stasis-laser",
+        "key":  "stasis_laser",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 16 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/stasis_laser"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Warp Interdimensional",
+        "slug":  "warp-interdimensional",
+        "key":  "warp_interdimensional",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Biome"
+                        ],
+        "summary":  "Custom TERF biome definition used by the pack\u0027s dimensions or worldgen rules.",
+        "sourceFiles":  [
+                            "ref/terf/worldgen/biome/warp_interdimensional.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Orbital Strike",
+        "slug":  "orbital-strike",
+        "key":  "orbital_strike",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 12 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/orbital_strike"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Electrolyzer",
+        "slug":  "electrolyzer",
+        "key":  "electrolyzer",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 6 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/electrolyzer"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Meteor",
+        "slug":  "meteor",
+        "key":  "meteor",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 12 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/meteor"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Gray Glazed Terracotta",
+        "slug":  "gray-glazed-terracotta",
+        "key":  "gray_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/asphalt.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Exposed Chiseled Copper",
+        "slug":  "exposed-chiseled-copper",
+        "key":  "exposed_chiseled_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Chiseled Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_chiseled_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Light Gray Glazed Terracotta",
+        "slug":  "light-gray-glazed-terracotta",
+        "key":  "light_gray_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/hex_plate.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "No Oxygen",
+        "slug":  "no-oxygen",
+        "key":  "no_oxygen",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/no_oxygen.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Ender Pearl",
+        "slug":  "ender-pearl",
+        "key":  "ender_pearl",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Scripted TERF concept implemented through 2 function file(s) in the entity system.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/ender_pearl"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Electron Shockwave",
+        "slug":  "electron-shockwave",
+        "key":  "electron_shockwave",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/electron_shockwave.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Nuclear Wasteland",
+        "slug":  "nuclear-wasteland",
+        "key":  "nuclear_wasteland",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Biome"
+                        ],
+        "summary":  "Custom TERF biome definition used by the pack\u0027s dimensions or worldgen rules.",
+        "sourceFiles":  [
+                            "ref/terf/worldgen/biome/nuclear_wasteland.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Well That Backfired...",
+        "slug":  "break-turret",
+        "key":  "break_turret",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Break an active security turret",
+        "sourceFiles":  [
+                            "ref/terf/advancement/break_turret.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Second Chance",
+        "slug":  "second-chance",
+        "key":  "second_chance",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Restabilize the S.T.F.R using the Stasis Laser",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/second_chance.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr"
+                    ]
+    },
+    {
+        "title":  "Waxed Oxidized Copper Chain",
+        "slug":  "waxed-oxidized-copper-chain",
+        "key":  "waxed_oxidized_copper_chain",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/data_cable.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Electric Press",
+        "slug":  "electric-press",
+        "key":  "electric_press",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/electric_press"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Exposed Copper",
+        "slug":  "exposed-copper",
+        "key":  "exposed_copper",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Exposed Copper within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/exposed_copper_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "exposed_copper_grate",
+                        "exposed_copper_bulb",
+                        "exposed_copper_trapdoor",
+                        "exposed_copper_door"
+                    ]
+    },
+    {
+        "title":  "Chimney",
+        "slug":  "chimney",
+        "key":  "chimney",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 3 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/chimney"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Warp Core Panel",
+        "slug":  "warp-core-panel",
+        "key":  "warp_core_panel",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 11 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/warp_core_panel"
+                       ],
+        "related":  [
+                        "warp_core"
+                    ]
+    },
+    {
+        "title":  "Lime Glazed Terracotta",
+        "slug":  "lime-glazed-terracotta",
+        "key":  "lime_glazed_terracotta",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/waxed_cut_copper_vertical_stairs.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Extrusion Press",
+        "slug":  "extrusion-press",
+        "key":  "extrusion_press",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 6 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/extrusion_press"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Oxidized Copper Trapdoor",
+        "slug":  "oxidized-copper-trapdoor",
+        "key":  "oxidized_copper_trapdoor",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Oxidized Copper Trapdoor within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/oxidized_copper_trapdoor_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "oxidized_copper"
+                    ]
+    },
+    {
+        "title":  "Bleeding",
+        "slug":  "bleeding",
+        "key":  "bleeding",
+        "primaryCategory":  "Hazards",
+        "categories":  [
+                           "Hazards"
+                       ],
+        "sourceTypes":  [
+                            "Damage Type"
+                        ],
+        "summary":  "Custom TERF damage source used by pack mechanics, failures, or environmental effects.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/bleeding.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Space",
+        "slug":  "space",
+        "key":  "space",
+        "primaryCategory":  "World \u0026 Dimensions",
+        "categories":  [
+                           "World \u0026 Dimensions"
+                       ],
+        "sourceTypes":  [
+                            "Timeline"
+                        ],
+        "summary":  "Timeline definition controlling visual or temporal behavior in TERF spaces.",
+        "sourceFiles":  [
+                            "ref/terf/timeline/space.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Diesel Generator",
+        "slug":  "diesel-generator",
+        "key":  "diesel_generator",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/diesel_generator"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Loom",
+        "slug":  "loom",
+        "key":  "loom",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/loom_mainframe_server.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Unforeseen Consequences",
+        "slug":  "stfr-startup-failure",
+        "key":  "stfr_startup_failure",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Experience an S.T.F.R startup failure",
+        "sourceFiles":  [
+                            "ref/terf/advancement/stfr/stfr_startup_failure.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "stfr",
+                        "stfr_startup"
+                    ]
+    },
+    {
+        "title":  "Charcoal",
+        "slug":  "charcoal",
+        "key":  "charcoal",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/charcoal_from_smelting_melon.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Weathered Copper Door",
+        "slug":  "weathered-copper-door",
+        "key":  "weathered_copper_door",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Process recipe entry for Weathered Copper Door within TERF\u0027s material conversion chain.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/blasting/weathered_copper_door_from_blasting.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "weathered_copper"
+                    ]
+    },
+    {
+        "title":  "Melon Slice",
+        "slug":  "melon-slice",
+        "key":  "melon_slice",
+        "primaryCategory":  "Items \u0026 Blocks",
+        "categories":  [
+                           "Items \u0026 Blocks"
+                       ],
+        "sourceTypes":  [
+                            "Recipe"
+                        ],
+        "summary":  "Craftable or processable TERF item/block detected from recipe data.",
+        "sourceFiles":  [
+                            "ref/terf/recipe/melon_slice_from_melon.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "OpenCore Startup",
+        "slug":  "opencore-startup",
+        "key":  "opencore_startup",
+        "primaryCategory":  "Concepts \u0026 Systems",
+        "categories":  [
+                           "Concepts \u0026 Systems"
+                       ],
+        "sourceTypes":  [
+                            "Advancement"
+                        ],
+        "summary":  "Start the OpenCore",
+        "sourceFiles":  [
+                            "ref/terf/advancement/opencore/opencore_startup.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+                        "opencore"
+                    ]
+    },
+    {
+        "title":  "Shearing Press",
+        "slug":  "shearing-press",
+        "key":  "shearing_press",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 7 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/shearing_press"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Hazard Triangle",
+        "slug":  "hazard-triangle",
+        "key":  "hazard_triangle",
+        "primaryCategory":  "Media \u0026 Cosmetics",
+        "categories":  [
+                           "Media \u0026 Cosmetics"
+                       ],
+        "sourceTypes":  [
+                            "Painting"
+                        ],
+        "summary":  "Painting variant bundled with the TERF content set.",
+        "sourceFiles":  [
+                            "ref/terf/painting_variant/hazard_triangle.json"
+                        ],
+        "sourceDirs":  [
+
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Steam Engine",
+        "slug":  "steam-engine",
+        "key":  "steam_engine",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Advancement"
+                        ],
+        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/advancement/steam_engine.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/steam_engine"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Laser",
+        "slug":  "laser",
+        "key":  "laser",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory",
+                            "Damage Type"
+                        ],
+        "summary":  "Machine logic implemented through 9 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+                            "ref/terf/damage_type/laser.json"
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/laser"
+                       ],
+        "related":  [
+
+                    ]
+    },
+    {
+        "title":  "Solar Panel",
+        "slug":  "solar-panel",
+        "key":  "solar_panel",
+        "primaryCategory":  "Machines",
+        "categories":  [
+                           "Machines"
+                       ],
+        "sourceTypes":  [
+                            "Function Directory"
+                        ],
+        "summary":  "Machine logic implemented through 21 function file(s) under the TERF machine controller tree.",
+        "sourceFiles":  [
+
+                        ],
+        "sourceDirs":  [
+                           "ref/terf/function/entity/machines/solar_panel"
+                       ],
+        "related":  [
+
+                    ]
+    }
+]

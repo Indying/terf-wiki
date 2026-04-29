@@ -1,0 +1,1 @@
+$particle minecraft:dust{color:$(C),scale:4} ~ ~ ~ $(S) $(S) $(S) 0 10 force

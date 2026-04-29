@@ -1,0 +1,1 @@
+$execute positioned $(x) 0 $(z) run forceload remove ~-$(axis_x) ~-$(axis_z) ~$(axis_x) ~$(axis_z)

@@ -1,0 +1,2 @@
+$summon marker ~ ~ ~ {Tags:["terf_currententity","terf_shutdown_fail_orbit","terf_related_$(machine_id)"]}
+execute as @e[type=marker,tag=terf_currententity] run function terf:entity/machines/stfr/states/shutdown_failure/orbit/randomize

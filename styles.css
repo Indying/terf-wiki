@@ -389,7 +389,11 @@ h3 {
 
 :root[data-theme="dark"] .button-secondary,
 :root[data-theme="dark"] .entry,
-:root[data-theme="dark"] .template-card {
+:root[data-theme="dark"] .template-card,
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .catalog-card,
+:root[data-theme="dark"] .info-card,
+:root[data-theme="dark"] .related-link {
   background:
     linear-gradient(180deg, rgba(40, 44, 35, 0.96), rgba(30, 34, 27, 0.98));
 }
@@ -459,6 +463,104 @@ h3 {
   margin-top: 14px;
 }
 
+.stat-grid,
+.catalog-grid,
+.info-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.stat-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.catalog-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.info-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card,
+.catalog-card,
+.info-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(249, 245, 236, 0.96));
+}
+
+.stat-card h2,
+.catalog-card h3,
+.info-card h3 {
+  margin: 0 0 10px;
+}
+
+.stat-value {
+  margin: 0 0 8px;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.catalog-card a {
+  text-decoration: none;
+}
+
+.catalog-card p,
+.stat-card p,
+.info-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.catalog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.catalog-card .meta-row {
+  margin-top: 14px;
+}
+
+.detail-list,
+.source-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.empty-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.related-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 250, 240, 0.72);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+}
+
 .outline-copy {
   margin: 0 0 14px;
   font-size: 0.94rem;
@@ -486,7 +588,10 @@ h3 {
   }
 
   .landing-grid,
-  .template-grid {
+  .template-grid,
+  .stat-grid,
+  .catalog-grid,
+  .info-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -513,7 +618,10 @@ h3 {
   }
 
   .landing-grid,
-  .template-grid {
+  .template-grid,
+  .stat-grid,
+  .catalog-grid,
+  .info-grid {
     grid-template-columns: 1fr;
   }
 

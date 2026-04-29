@@ -1,0 +1,1 @@
+$execute rotated ~$(yaw) ~$(pitch) run particle end_rod ~ ~ ~ ^ ^ ^$(force) 0.00000001 0 force
