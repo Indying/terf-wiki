@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/environmental-simulation-systems.html">Back to Environmental &amp; Simulation Systems</a>
@@ -77,7 +78,51 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Fallout is a scripted TERF system implemented through 3 scanned function file(s).</p>
+<p>The logic lives directly in its root function directory, so the behavior is driven by a compact set of tick, interaction, or helper functions.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: radius increase per tick. Operations seen: operation, set.</li>
+<li>terf_data_B: current radius in blocks | accuracy:1000. Operations seen: operation, set. Thresholds seen: ..0.</li>
+<li>terf_data_C: max radius in blocks | accuracy:1000, after reaching this the radius and intensity will decrease. Operations seen: set.</li>
+<li>terf_data_D: intensity divider, for the {current radius} skin radiation per tick you get in the center. Operations seen: add, operation, set.</li>
+<li>terf_data_E: radius decrease after reaching max radius. Operations seen: operation, set.</li>
+<li>terf_data_N: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>intensity_divider (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>radius (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>x2 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>z2 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>x2 is recalculated from stored command output in in_fallout_area.mcfunction.</li>
+<li>z2 is recalculated from stored command output in in_fallout_area.mcfunction.</li>
+<li>Observed scripted operation in in_fallout_area.mcfunction: scoreboard players operation x2 terf_states -= x terf_states</li>
+<li>Observed scripted operation in in_fallout_area.mcfunction: scoreboard players operation z2 terf_states -= z terf_states</li>
+<li>Observed scripted operation in in_fallout_area.mcfunction: execute store result storage terf:temp args.x float 0.01 run scoreboard players get x2 terf_states</li>
+<li>Observed scripted operation in in_fallout_area.mcfunction: execute store result storage terf:temp args.z float 0.01 run scoreboard players get z2 terf_states</li>
+<li>temp2 is recalculated from stored command output in in_fallout_area.mcfunction.</li>
+<li>Observed scripted operation in in_fallout_area.mcfunction: scoreboard players operation temp terf_states = radius terf_states</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This system is generally achieved by creating the environmental condition that the functions look for, such as a matching block layout, entity state, or ambient pack event.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

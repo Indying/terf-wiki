@@ -4,6 +4,9 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $refRoot = Join-Path $repoRoot "ref\terf"
 $entriesRoot = Join-Path $repoRoot "entries"
 $groupsRoot = Join-Path $repoRoot "groups"
+$siteVersion = "v0.6.0"
+$siteUpdatedLabel = (Get-Date).ToString("yyyy-MM-dd HH:mm")
+$siteMetaLabel = "$siteVersion | Updated $siteUpdatedLabel"
 
 if (-not (Test-Path $refRoot)) {
   throw "Expected TERF reference data at $refRoot"
@@ -879,6 +882,468 @@ function Bullet-ListHtml {
   return "<ul class=`"detail-list`">`n$($lines -join "`n")`n</ul>"
 }
 
+function New-SectionDoc {
+  param(
+    [string[]]$Description = @(),
+    [string[]]$Values = @(),
+    [string[]]$Calculations = @(),
+    [string[]]$HowTo = @()
+  )
+
+  return [ordered]@{
+    Description = @($Description | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    Values = @($Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    Calculations = @($Calculations | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    HowTo = @($HowTo | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+  }
+}
+
+function Merge-SectionDocs {
+  param([object[]]$Docs)
+
+  $description = [System.Collections.ArrayList]::new()
+  $values = [System.Collections.ArrayList]::new()
+  $calculations = [System.Collections.ArrayList]::new()
+  $howTo = [System.Collections.ArrayList]::new()
+
+  foreach ($doc in $Docs) {
+    if ($null -eq $doc) { continue }
+
+    foreach ($item in @($doc.Description)) { Add-UniqueValue -List $description -Value ([string]$item) }
+    foreach ($item in @($doc.Values)) { Add-UniqueValue -List $values -Value ([string]$item) }
+    foreach ($item in @($doc.Calculations)) { Add-UniqueValue -List $calculations -Value ([string]$item) }
+    foreach ($item in @($doc.HowTo)) { Add-UniqueValue -List $howTo -Value ([string]$item) }
+  }
+
+  return [ordered]@{
+    Description = @($description)
+    Values = @($values)
+    Calculations = @($calculations)
+    HowTo = @($howTo)
+  }
+}
+
+function Resolve-RepoPath {
+  param([string]$RelativePath)
+
+  if ([string]::IsNullOrWhiteSpace($RelativePath)) { return $null }
+  return Join-Path $repoRoot ($RelativePath -replace "/", "\")
+}
+
+function Get-ReadableRelativePath {
+  param([string]$FullPath)
+
+  if ([string]::IsNullOrWhiteSpace($FullPath)) { return "" }
+  return $FullPath.Replace("$repoRoot\", "").Replace("\", "/")
+}
+
+function Ensure-TrackedEntry {
+  param(
+    [hashtable]$Map,
+    [string]$Key
+  )
+
+  if (-not $Map.ContainsKey($Key)) {
+    $Map[$Key] = @{
+      Description = $null
+      Operations = [System.Collections.ArrayList]::new()
+      Thresholds = [System.Collections.ArrayList]::new()
+    }
+  }
+
+  return $Map[$Key]
+}
+
+function Format-TrackedValueBullet {
+  param(
+    [string]$Name,
+    $Info,
+    [string]$LabelSuffix = ""
+  )
+
+  $label = if ($LabelSuffix) { "$Name$LabelSuffix" } else { $Name }
+  $parts = [System.Collections.ArrayList]::new()
+
+  if ($Info.Description) {
+    [void]$parts.Add(($Info.Description.Trim().TrimEnd(".") + "."))
+  } else {
+    [void]$parts.Add("Referenced by the scanned TERF logic, but no inline comment described it directly.")
+  }
+
+  if ($Info.Operations.Count -gt 0) {
+    [void]$parts.Add("Operations seen: " + ((@($Info.Operations) | Sort-Object -Unique) -join ", ") + ".")
+  }
+
+  if ($Info.Thresholds.Count -gt 0) {
+    $sampleThresholds = @($Info.Thresholds | Select-Object -First 5)
+    [void]$parts.Add("Thresholds seen: " + ($sampleThresholds -join ", ") + ".")
+  }
+
+  return "${label}: " + (($parts -join " ").Trim())
+}
+
+function Convert-FunctionLineToBullet {
+  param(
+    [string]$RelativePath,
+    [string]$Line
+  )
+
+  $clean = $Line.Trim()
+  if ([string]::IsNullOrWhiteSpace($clean) -or $clean.StartsWith("#")) { return $null }
+
+  $fileLabel = [System.IO.Path]::GetFileName($RelativePath)
+
+  if ($clean -match 'scoreboard players add @s (terf_data_[A-Za-z]+) (-?\d+)') {
+    return "$($Matches[1]) increases by $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players remove @s (terf_data_[A-Za-z]+) (-?\d+)') {
+    return "$($Matches[1]) decreases by $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players set @s (terf_data_[A-Za-z]+) (-?\d+)') {
+    return "$($Matches[1]) is set to $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match '(?:if|unless) score @s (terf_data_[A-Za-z]+) matches ([^ ]+)') {
+    return "$($Matches[1]) branches on the range $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match '(?:if|unless) score ([a-zA-Z0-9_]+) terf_states matches ([^ ]+)') {
+    return "$($Matches[1]) uses the shared terf_states range $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players set ([a-zA-Z0-9_]+) terf_states (-?\d+)') {
+    return "$($Matches[1]) is set to $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players add ([a-zA-Z0-9_]+) terf_states (-?\d+)') {
+    return "$($Matches[1]) increases by $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players remove ([a-zA-Z0-9_]+) terf_states (-?\d+)') {
+    return "$($Matches[1]) decreases by $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players operation ([^ ]+) terf_states [+\-*/%]?= @s (terf_data_[A-Za-z]+)') {
+    return "$($Matches[1]) copies or transforms $($Matches[2]) through terf_states scratch math in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players operation @s (terf_data_[A-Za-z]+) [+\-*/%]?= ([^ ]+) terf_states') {
+    return "$($Matches[1]) is recalculated from the shared $($Matches[2]) terf_states score in $fileLabel."
+  }
+
+  if ($clean -match 'scoreboard players operation @s (terf_data_[A-Za-z]+) [+\-*/%]?= @s (terf_data_[A-Za-z]+)') {
+    return "$($Matches[1]) is recalculated from $($Matches[2]) in $fileLabel."
+  }
+
+  if ($clean -match 'store result score ([a-zA-Z0-9_]+) terf_states ') {
+    return "$($Matches[1]) is recalculated from stored command output in $fileLabel."
+  }
+
+  return "Observed scripted operation in ${fileLabel}: $clean"
+}
+
+function Get-FunctionDirectoryDoc {
+  param($Entry)
+
+  $files = [System.Collections.ArrayList]::new()
+  $subsystems = [System.Collections.ArrayList]::new()
+
+  foreach ($relativeDir in $Entry.SourceDirs) {
+    $absoluteDir = Resolve-RepoPath $relativeDir
+    if (-not $absoluteDir -or -not (Test-Path $absoluteDir)) { continue }
+
+    Get-ChildItem -Path $absoluteDir -Recurse -File | ForEach-Object {
+      Add-UniqueValue -List $files -Value $_.FullName
+    }
+
+    Get-ChildItem -Path $absoluteDir -Directory | ForEach-Object {
+      Add-UniqueValue -List $subsystems -Value (Pretty-Title $_.Name)
+    }
+  }
+
+  $trackedValues = @{}
+  $trackedStateScores = @{}
+  $calcBullets = [System.Collections.ArrayList]::new()
+  $ignoredStateScores = @("temp", "temp2", "succeeded", "terminated")
+
+  foreach ($absoluteFile in $files) {
+    $relativePath = Get-ReadableRelativePath $absoluteFile
+
+    foreach ($line in Get-Content $absoluteFile) {
+      $clean = $line.Trim()
+
+      if ($clean -match '^#\s*(terf_data_[A-Za-z]+)\s*=\s*(.+)$') {
+        $info = Ensure-TrackedEntry -Map $trackedValues -Key $Matches[1]
+        if (-not $info.Description) {
+          $info.Description = $Matches[2]
+        }
+      }
+
+      $stateThresholdMatch = [regex]::Match($clean, 'if score ([a-zA-Z0-9_]+) terf_states matches ([^ ]+)')
+      if ($stateThresholdMatch.Success) {
+        $stateName = $stateThresholdMatch.Groups[1].Value
+        if ($ignoredStateScores -notcontains $stateName) {
+          $info = Ensure-TrackedEntry -Map $trackedStateScores -Key $stateName
+          Add-UniqueValue -List $info.Thresholds -Value $stateThresholdMatch.Groups[2].Value
+        }
+      }
+
+      $stateOperationMatch = [regex]::Match($clean, 'scoreboard players (set|add|remove|operation) ([a-zA-Z0-9_]+) terf_states')
+      if ($stateOperationMatch.Success) {
+        $stateName = $stateOperationMatch.Groups[2].Value
+        if ($ignoredStateScores -notcontains $stateName) {
+          $info = Ensure-TrackedEntry -Map $trackedStateScores -Key $stateName
+          Add-UniqueValue -List $info.Operations -Value $stateOperationMatch.Groups[1].Value
+        }
+      }
+
+      if ($clean -match 'scoreboard players (set|add|remove|operation) ') {
+        $operationName = $Matches[1]
+        foreach ($varMatch in [regex]::Matches($clean, 'terf_data_[A-Za-z]+')) {
+          $info = Ensure-TrackedEntry -Map $trackedValues -Key $varMatch.Value
+          Add-UniqueValue -List $info.Operations -Value $operationName
+        }
+      }
+
+      if ($clean -match 'matches ([^ ]+)') {
+        $threshold = $Matches[1]
+        foreach ($varMatch in [regex]::Matches($clean, 'terf_data_[A-Za-z]+')) {
+          $info = Ensure-TrackedEntry -Map $trackedValues -Key $varMatch.Value
+          Add-UniqueValue -List $info.Thresholds -Value $threshold
+        }
+      }
+
+      if (
+        $calcBullets.Count -lt 8 -and (
+          $clean -match 'scoreboard players ' -or
+          $clean -match 'if score .* matches ' -or
+          $clean -match 'store result score [^ ]+ terf_states '
+        )
+      ) {
+        $calcBullet = Convert-FunctionLineToBullet -RelativePath $relativePath -Line $clean
+        if ($calcBullet) {
+          Add-UniqueValue -List $calcBullets -Value $calcBullet
+        }
+      }
+    }
+  }
+
+  $description = [System.Collections.ArrayList]::new()
+  [void]$description.Add("$($Entry.Title) is a scripted TERF system implemented through $($files.Count) scanned function file(s).")
+  if ($subsystems.Count -gt 0) {
+    [void]$description.Add("The source is split into subsystem folders such as $((@($subsystems) | Select-Object -First 6) -join ', '), which suggests the pack treats this as a reusable runtime system rather than a single one-off command.")
+  } else {
+    [void]$description.Add("The logic lives directly in its root function directory, so the behavior is driven by a compact set of tick, interaction, or helper functions.")
+  }
+
+  if ($trackedValues.Count -gt 0) {
+    [void]$description.Add("Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.")
+  } else {
+    [void]$description.Add("The scanned functions did not expose commented terf_data fields, so the notes below focus on thresholds and state gates that were still visible in the code.")
+  }
+
+  $values = [System.Collections.ArrayList]::new()
+  foreach ($key in ($trackedValues.Keys | Sort-Object)) {
+    [void]$values.Add((Format-TrackedValueBullet -Name $key -Info $trackedValues[$key]))
+  }
+
+  foreach ($key in ($trackedStateScores.Keys | Sort-Object)) {
+    [void]$values.Add((Format-TrackedValueBullet -Name $key -Info $trackedStateScores[$key] -LabelSuffix " (terf_states)"))
+  }
+
+  if ($values.Count -eq 0) {
+    [void]$values.Add("No stable terf_data or named terf_states variables were documented in the scanned source. This system appears to rely on direct commands, tags, or NBT checks instead.")
+  }
+
+  $calculations = if ($calcBullets.Count -gt 0) {
+    @($calcBullets)
+  } else {
+    @("No reusable closed-form formula was obvious in the scanned functions. The system is primarily driven by state checks, timers, and scoreboard thresholds.")
+  }
+
+  $howTo = switch ($Entry.SubgroupSlug) {
+    "player-interaction-systems" { @("This is a player-facing runtime system, so it is usually triggered by interacting with the named block, item, or event rather than crafted as a standalone unlock.", "If a matching advancement exists elsewhere in the pack, that advancement is the clearest player-visible signal that the interaction happened successfully.") }
+    "entity-projectile-systems" { @("This system is usually spawned by another TERF machine, weapon, projectile, or scripted event. The function directory defines behavior after creation, not a direct crafting recipe.") }
+    "environmental-simulation-systems" { @("This system is generally achieved by creating the environmental condition that the functions look for, such as a matching block layout, entity state, or ambient pack event.") }
+    default { @("This is a pack-level scripted system rather than a discrete crafted object. The scanned function directory defines how it behaves once TERF starts using it, but not always a separate acquisition path.") }
+  }
+
+  return New-SectionDoc -Description @($description) -Values @($values) -Calculations @($calculations) -HowTo @($howTo)
+}
+
+function Get-AdvancementDoc {
+  param($Entry)
+
+  $advancementFile = $null
+  foreach ($relativeFile in $Entry.SourceFiles) {
+    if ($relativeFile -like "ref/terf/advancement/*") {
+      $advancementFile = Resolve-RepoPath $relativeFile
+      break
+    }
+  }
+
+  if (-not $advancementFile -or -not (Test-Path $advancementFile)) { return $null }
+
+  $json = Get-Content $advancementFile -Raw | ConvertFrom-Json
+  $displayTitle = Get-TextValue $json.display.title
+  $displayDescription = Get-TextValue $json.display.description
+  $criteriaProperties = @($json.criteria.PSObject.Properties)
+  $criteriaLines = [System.Collections.ArrayList]::new()
+  $triggerIds = [System.Collections.ArrayList]::new()
+
+  foreach ($criterion in $criteriaProperties) {
+    $trigger = if ($criterion.Value.trigger) { [string]$criterion.Value.trigger } else { "unspecified" }
+    Add-UniqueValue -List $triggerIds -Value $trigger
+    [void]$criteriaLines.Add("Criterion '$($criterion.Name)': trigger $trigger.")
+  }
+
+  $description = [System.Collections.ArrayList]::new()
+  if ($displayDescription) {
+    [void]$description.Add("This TERF advancement represents the pack milestone '$($displayTitle)' and uses the in-game description '$displayDescription'.")
+  } else {
+    [void]$description.Add("This TERF advancement tracks the '$($displayTitle)' milestone and is used as a progression or notification hook inside the pack.")
+  }
+
+  if ($json.parent) {
+    [void]$description.Add("Its parent is $($json.parent), so it sits inside an existing TERF progression chain instead of acting as a completely isolated trigger.")
+  }
+
+  $values = [System.Collections.ArrayList]::new()
+  if ($json.display.icon.id) { [void]$values.Add("Display icon: $($json.display.icon.id).") }
+  if ($json.display.frame) { [void]$values.Add("Frame: $($json.display.frame).") }
+  if ($null -ne $json.display.show_toast) { [void]$values.Add("Show toast: $($json.display.show_toast).") }
+  if ($null -ne $json.display.announce_to_chat) { [void]$values.Add("Announce to chat: $($json.display.announce_to_chat).") }
+  if ($json.parent) { [void]$values.Add("Parent advancement: $($json.parent).") }
+  foreach ($criterionLine in $criteriaLines) { [void]$values.Add($criterionLine) }
+  if ($json.rewards.function) { [void]$values.Add("Reward function: $($json.rewards.function).") }
+
+  $calculations = @("No numeric calculations are defined in this advancement JSON. Completion is criteria-driven, and TERF functions may grant it directly when the tracked event happens.")
+
+  $howTo = [System.Collections.ArrayList]::new()
+  if ($displayDescription) {
+    [void]$howTo.Add("Gameplay intent from the advancement text: $displayDescription.")
+  }
+
+  if ($triggerIds.Count -gt 0 -and (@($triggerIds | Where-Object { $_ -ne 'minecraft:impossible' }).Count -eq 0)) {
+    [void]$howTo.Add("All listed criteria use minecraft:impossible, which means the pack is expected to grant this advancement from scripted logic rather than a vanilla trigger alone.")
+  } elseif ($triggerIds -contains "minecraft:tick") {
+    [void]$howTo.Add("This advancement can be progressed by normal TERF ticking. In practice that means it is passively granted or maintained once the pack detects the right state.")
+  } elseif ($criteriaLines.Count -gt 0) {
+    [void]$howTo.Add("Meet the listed criteria trigger(s) and TERF should award the advancement when those conditions evaluate true.")
+  }
+
+  if ($json.parent) {
+    [void]$howTo.Add("Because it has a parent advancement, you should expect the parent milestone to exist first in the intended progression flow.")
+  }
+
+  return New-SectionDoc -Description @($description) -Values @($values) -Calculations @($calculations) -HowTo @($howTo)
+}
+
+function Get-EnchantmentDoc {
+  param($Entry)
+
+  $enchantmentFile = $null
+  foreach ($relativeFile in $Entry.SourceFiles) {
+    if ($relativeFile -like "ref/terf/enchantment/*") {
+      $enchantmentFile = Resolve-RepoPath $relativeFile
+      break
+    }
+  }
+
+  if (-not $enchantmentFile -or -not (Test-Path $enchantmentFile)) { return $null }
+
+  $json = Get-Content $enchantmentFile -Raw | ConvertFrom-Json
+  $descriptionText = [string]$json.description
+  $effectEvents = @($json.effects.PSObject.Properties)
+  $eventNames = @($effectEvents | ForEach-Object { $_.Name })
+
+  $description = [System.Collections.ArrayList]::new()
+  if (-not [string]::IsNullOrWhiteSpace($descriptionText)) {
+    [void]$description.Add("$($Entry.Title) is a TERF enchantment with the built-in description '$descriptionText'.")
+  } else {
+    [void]$description.Add("$($Entry.Title) is a TERF enchantment definition whose gameplay behavior is declared directly in JSON effect blocks.")
+  }
+
+  if ($eventNames.Count -gt 0) {
+    [void]$description.Add("Its effects are registered on event hooks such as $($eventNames -join ', '), so the enchantment fires only when those hook points occur.")
+  }
+
+  $values = [System.Collections.ArrayList]::new()
+  if ($json.supported_items) {
+    if ($json.supported_items -is [System.Collections.IEnumerable] -and -not ($json.supported_items -is [string])) {
+      [void]$values.Add("Supported items: $((@($json.supported_items) -join ', ')).")
+    } else {
+      [void]$values.Add("Supported items: $([string]$json.supported_items).")
+    }
+  }
+  if ($json.weight) { [void]$values.Add("Weight: $($json.weight).") }
+  if ($json.max_level) { [void]$values.Add("Max level: $($json.max_level).") }
+  if ($json.min_cost) { [void]$values.Add("Minimum enchanting cost: base $($json.min_cost.base), +$($json.min_cost.per_level_above_first) per level above first.") }
+  if ($json.max_cost) { [void]$values.Add("Maximum enchanting cost: base $($json.max_cost.base), +$($json.max_cost.per_level_above_first) per level above first.") }
+  if ($null -ne $json.anvil_cost) { [void]$values.Add("Anvil cost: $($json.anvil_cost).") }
+  if ($json.slots) { [void]$values.Add("Applicable slots: $((@($json.slots) -join ', ')).") }
+  if ($eventNames.Count -gt 0) { [void]$values.Add("Effect hooks: $($eventNames -join ', ').") }
+
+  $calculations = [System.Collections.ArrayList]::new()
+
+  foreach ($eventProperty in $effectEvents) {
+    foreach ($effectBlock in @($eventProperty.Value)) {
+      if ($effectBlock.effect.type -eq "minecraft:explode" -and $effectBlock.effect.radius.type -eq "minecraft:linear") {
+        [void]$calculations.Add("Explosion radius on $($eventProperty.Name) = $($effectBlock.effect.radius.base) + (level - 1) * $($effectBlock.effect.radius.per_level_above_first).")
+      }
+    }
+  }
+
+  $tickEffects = @($json.effects."minecraft:tick")
+  $impulseEffects = @($tickEffects | Where-Object { $_.effect.type -eq "minecraft:apply_impulse" })
+  if ($impulseEffects.Count -gt 0) {
+    $axisGroups = $impulseEffects | Group-Object { $_.effect.direction -join "," }
+    foreach ($axisGroup in $axisGroups) {
+      $magnitudes = @($axisGroup.Group | ForEach-Object { [double]$_.effect.magnitude } | Sort-Object)
+      [void]$calculations.Add("Per-axis impulse magnitudes for direction [$($axisGroup.Name)] range from $($magnitudes[0]) to $($magnitudes[-1]) across $($magnitudes.Count) scripted bit-flags.")
+    }
+    [void]$calculations.Add("The final tick effect list ends with a run_function cleanup call, so the impulse payload is cleared after the encoded movement is applied.")
+  }
+
+  if ($calculations.Count -eq 0) {
+    [void]$calculations.Add("No extra numeric scaling beyond the declared cost, level, and effect blocks was exposed in this enchantment JSON.")
+  }
+
+  $howTo = @("The enchantment JSON defines behavior once an item already has this enchantment, but it does not declare an acquisition path by itself. No crafting or unlock route was directly exposed in the scanned source for this page.")
+
+  return New-SectionDoc -Description @($description) -Values @($values) -Calculations @($calculations) -HowTo @($howTo)
+}
+
+function Get-ConceptSystemDoc {
+  param($Entry)
+
+  $docs = [System.Collections.ArrayList]::new()
+
+  if ($Entry.SourceTypes -contains "Function Directory") {
+    [void]$docs.Add((Get-FunctionDirectoryDoc -Entry $Entry))
+  }
+
+  if ($Entry.SourceTypes -contains "Advancement") {
+    [void]$docs.Add((Get-AdvancementDoc -Entry $Entry))
+  }
+
+  if ($Entry.SourceTypes -contains "Enchantment") {
+    [void]$docs.Add((Get-EnchantmentDoc -Entry $Entry))
+  }
+
+  if ($docs.Count -eq 0) {
+    return New-SectionDoc `
+      -Description @("No concept-specific source synthesizer matched this page yet, so it remains a generic TERF reference entry.") `
+      -Values @("No source-backed values were extracted for this entry yet.") `
+      -Calculations @("No calculations were extracted for this entry yet.") `
+      -HowTo @("No direct acquisition or trigger path was detected in the scanned source.")
+  }
+
+  return Merge-SectionDocs $docs
+}
+
 function Get-SubgroupDefinition {
   param(
     [string]$Category,
@@ -1365,6 +1830,12 @@ foreach ($category in $categoryOrder) {
 }
 
 $allEntries = $entries.Values | Sort-Object Title
+$generatedEntryDocs = @{}
+
+foreach ($entry in $allEntries) {
+  if ($entry.PrimaryCategory -ne "Concepts & Systems") { continue }
+  $generatedEntryDocs[$entry.Key] = Get-ConceptSystemDoc -Entry $entry
+}
 
 foreach ($definitionCategory in $categoryOrder) {
   $categoryFolder = $categoryFolders[$definitionCategory]
@@ -1403,6 +1874,7 @@ foreach ($definitionCategory in $categoryOrder) {
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">$([System.Net.WebUtility]::HtmlEncode($siteMetaLabel))</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="$glossaryHref">Back to Glossary</a>
@@ -1479,12 +1951,34 @@ foreach ($entry in $allEntries) {
   $glossaryHref = "../../index.html#$folder"
   $siblingNav = Get-CategorySidebarHtml -Category $entry.PrimaryCategory -ActiveSlug $entry.SubgroupSlug -HrefPrefix "../../groups/$folder/"
   $customSections = ""
+  $pageDocParts = [System.Collections.ArrayList]::new()
 
   if ($customEntryDocs.ContainsKey($entry.Key)) {
-    $customDoc = $customEntryDocs[$entry.Key]
-    $descriptionHtml = Paragraph-ListHtml $customDoc.Description
-    $valuesHtml = Bullet-ListHtml $customDoc.Values
-    $calculationsHtml = Bullet-ListHtml $customDoc.Calculations
+    [void]$pageDocParts.Add($customEntryDocs[$entry.Key])
+  }
+
+  if ($generatedEntryDocs.ContainsKey($entry.Key)) {
+    [void]$pageDocParts.Add($generatedEntryDocs[$entry.Key])
+  }
+
+  if ($pageDocParts.Count -gt 0) {
+    $pageDoc = Merge-SectionDocs $pageDocParts
+    $descriptionHtml = Paragraph-ListHtml $pageDoc.Description
+    $valuesHtml = Bullet-ListHtml $pageDoc.Values
+    $calculationsHtml = Bullet-ListHtml $pageDoc.Calculations
+    $howToSection = ""
+
+    if (@($pageDoc.HowTo).Count -gt 0) {
+      $howToHtml = Bullet-ListHtml $pageDoc.HowTo
+      $howToSection = @"
+        <section class="doc-section">
+          <h2>How to Achieve</h2>
+          $howToHtml
+        </section>
+
+"@
+    }
+
     $customSections = @"
         <section class="doc-section">
           <h2>Description</h2>
@@ -1500,6 +1994,8 @@ foreach ($entry in $allEntries) {
           <h2>Calculations</h2>
           $calculationsHtml
         </section>
+
+        $howToSection
 
 "@
   }
@@ -1524,6 +2020,7 @@ foreach ($entry in $allEntries) {
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">$([System.Net.WebUtility]::HtmlEncode($siteMetaLabel))</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="$subgroupHref">Back to $([System.Net.WebUtility]::HtmlEncode($entry.SubgroupTitle))</a>
@@ -1671,6 +2168,7 @@ $indexPage = @"
         <a class="brand" href="./index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">$([System.Net.WebUtility]::HtmlEncode($siteMetaLabel))</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="#machines">Browse Machines</a>

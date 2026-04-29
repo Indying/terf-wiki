@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/environmental-simulation-systems.html">Back to Environmental &amp; Simulation Systems</a>
@@ -77,7 +78,44 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Limbo is a scripted TERF system implemented through 20 scanned function file(s).</p>
+<p>The source is split into subsystem folders such as Move, which suggests the pack treats this as a reusable runtime system rather than a single one-off command.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, set. Thresholds seen: 1, 2, 30, 90, 91.</li>
+<li>terf_data_B: Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 1, 2, 3, 4, 5.</li>
+<li>terf_data_P: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, set. Thresholds seen: 30..414.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Observed scripted operation in end_fail.mcfunction: scoreboard players set @a[distance=..96] terf_data_P 50</li>
+<li>succeeded is set to 1 in interaction.mcfunction.</li>
+<li>succeeded is set to 2 in interaction.mcfunction.</li>
+<li>terf_data_B branches on the range 1 in summon_tip.mcfunction.</li>
+<li>terf_data_B branches on the range 2 in summon_tip.mcfunction.</li>
+<li>terf_data_B branches on the range 3 in summon_tip.mcfunction.</li>
+<li>terf_data_B branches on the range 4 in summon_tip.mcfunction.</li>
+<li>terf_data_B branches on the range 5 in summon_tip.mcfunction.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This system is generally achieved by creating the environmental condition that the functions look for, such as a matching block layout, entity state, or ambient pack event.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

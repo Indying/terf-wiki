@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/player-interaction-systems.html">Back to Player &amp; Interaction Systems</a>
@@ -77,7 +78,43 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Stone Plate is a scripted TERF system implemented through 4 scanned function file(s).</p>
+<p>The logic lives directly in its root function directory, so the behavior is driven by a compact set of tick, interaction, or helper functions.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, set. Thresholds seen: 1.., 1, 3800...</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>terf_data_A is set to 1 in as_interaction.mcfunction.</li>
+<li>terf_data_A branches on the range 1 in tick.mcfunction.</li>
+<li>terf_data_A increases by 1 in tick.mcfunction.</li>
+<li>temp2 copies or transforms terf_data_A through terf_states scratch math in tick.mcfunction.</li>
+<li>temp2 decreases by 1900 in tick.mcfunction.</li>
+<li>Observed scripted operation in tick.mcfunction: scoreboard players operation temp2 terf_states *= 2 terf_states</li>
+<li>temp copies or transforms terf_data_A through terf_states scratch math in tick.mcfunction.</li>
+<li>temp uses the shared terf_states range 1900.. in tick.mcfunction.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This is a player-facing runtime system, so it is usually triggered by interacting with the named block, item, or event rather than crafted as a standalone unlock.</li>
+<li>If a matching advancement exists elsewhere in the pack, that advancement is the clearest player-visible signal that the interaction happened successfully.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

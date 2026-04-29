@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/entity-projectile-systems.html">Back to Entity &amp; Projectile Systems</a>
@@ -77,7 +78,40 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Neutron is a scripted TERF system implemented through 5 scanned function file(s).</p>
+<p>The logic lives directly in its root function directory, so the behavior is driven by a compact set of tick, interaction, or helper functions.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: reflections. Operations seen: add. Thresholds seen: 10...</li>
+<li>rotation_y (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>terf_data_A increases by 1 in reflect.mcfunction.</li>
+<li>terf_data_A branches on the range 10.. in reflect.mcfunction.</li>
+<li>rotation_y is recalculated from stored command output in reflect.mcfunction.</li>
+<li>Observed scripted operation in reflect.mcfunction: scoreboard players operation rotation_y terf_states /= -1 terf_states</li>
+<li>Observed scripted operation in reflect.mcfunction: execute store result entity @s Rotation[1] float 0.00001 run scoreboard players get rotation_y terf_states</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This system is usually spawned by another TERF machine, weapon, projectile, or scripted event. The function directory defines behavior after creation, not a direct crafting recipe.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

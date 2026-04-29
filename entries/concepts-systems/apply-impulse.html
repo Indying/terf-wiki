@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/core-systems.html">Back to Core Systems</a>
@@ -77,7 +78,44 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Apply Impulse is a TERF enchantment with the built-in description &#39;YEET!&#39;.</p>
+<p>Its effects are registered on event hooks such as minecraft:tick, so the enchantment fires only when those hook points occur.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>Supported items: minecraft:saddle.</li>
+<li>Weight: 1.</li>
+<li>Max level: 1.</li>
+<li>Minimum enchanting cost: base 0, +0 per level above first.</li>
+<li>Maximum enchanting cost: base 0, +0 per level above first.</li>
+<li>Anvil cost: 0.</li>
+<li>Applicable slots: saddle.</li>
+<li>Effect hooks: minecraft:tick.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Per-axis impulse magnitudes for direction [1,0,0] range from -214748.3648 to 107374.1824 across 32 scripted bit-flags.</li>
+<li>Per-axis impulse magnitudes for direction [0,1,0] range from -214748.3648 to 107374.1824 across 32 scripted bit-flags.</li>
+<li>Per-axis impulse magnitudes for direction [0,0,1] range from -214748.3648 to 107374.1824 across 32 scripted bit-flags.</li>
+<li>The final tick effect list ends with a run_function cleanup call, so the impulse payload is cleared after the encoded movement is applied.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>The enchantment JSON defines behavior once an item already has this enchantment, but it does not declare an acquisition path by itself. No crafting or unlock route was directly exposed in the scanned source for this page.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

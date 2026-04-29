@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/entity-projectile-systems.html">Back to Entity &amp; Projectile Systems</a>
@@ -77,7 +78,51 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Explosion is a scripted TERF system implemented through 40 scanned function file(s).</p>
+<p>The source is split into subsystem folders such as Antimatter, Discharge, Large Explosion, Nuclear, Seismic, Small Explosion, which suggests the pack treats this as a reusable runtime system rather than a single one-off command.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove. Thresholds seen: ..0, 100.., 1, 5, 9.</li>
+<li>terf_data_Ac: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 1...</li>
+<li>terf_data_Ae: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set.</li>
+<li>terf_data_B: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation. Thresholds seen: 50...</li>
+<li>terf_data_F: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set.</li>
+<li>terf_data_G: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 1...</li>
+<li>terf_data_P: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, set. Thresholds seen: 61...</li>
+<li>exposed (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, set. Thresholds seen: 1, 2, 3...</li>
+<li>length (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set.</li>
+<li>power (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 420, 100.., 50.., 300.., 500...</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>succeeded is set to 0 in attempt_explosion.mcfunction.</li>
+<li>succeeded uses the shared terf_states range 1 in attempt_explosion.mcfunction.</li>
+<li>succeeded is set to 1 in attempt_explosion_iterate.mcfunction.</li>
+<li>exposed is set to 0 in raycast.mcfunction.</li>
+<li>exposed increases by 1 in raycast.mcfunction.</li>
+<li>exposed uses the shared terf_states range 1 in raycast.mcfunction.</li>
+<li>exposed uses the shared terf_states range 2 in raycast.mcfunction.</li>
+<li>exposed uses the shared terf_states range 3.. in raycast.mcfunction.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This system is usually spawned by another TERF machine, weapon, projectile, or scripted event. The function directory defines behavior after creation, not a direct crafting recipe.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

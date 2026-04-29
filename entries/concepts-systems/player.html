@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/player-interaction-systems.html">Back to Player &amp; Interaction Systems</a>
@@ -77,7 +78,119 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Player is a scripted TERF system implemented through 190 scanned function file(s).</p>
+<p>The source is split into subsystem folders such as Advancement, Consumed, Custom Effects, Ender Chest, Fart, Menu, which suggests the pack treats this as a reusable runtime system rather than a single one-off command.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: environmental radiation. Operations seen: add, operation, remove, set. Thresholds seen: 1.., 100.., 0.., 301.., 201..300.</li>
+<li>terf_data_Ac: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 1...</li>
+<li>terf_data_B: photon cannon charge. Operations seen: operation.</li>
+<li>terf_data_C: immune. Operations seen: add, operation, set. Thresholds seen: 0, 1, 1.., 5...</li>
+<li>terf_data_D: force immune.</li>
+<li>terf_data_F: fard progress. Operations seen: add, operation, set. Thresholds seen: 40...</li>
+<li>terf_data_G: tool cooldown. Operations seen: add, operation, remove, set. Thresholds seen: 1, 1.., 360.., 3.., 100...</li>
+<li>terf_data_H: radiation damage. Operations seen: operation, remove, set. Thresholds seen: 1.., 1, 50000.., 50000..100000, 100001..200000.</li>
+<li>terf_data_I: absorbed radiation. Operations seen: operation, remove, set. Thresholds seen: 5000001.., 1.., ..-1, 100...</li>
+<li>terf_data_J: body rotation. Operations seen: add, operation. Thresholds seen: 60.., -50..50.</li>
+<li>terf_data_K: zero gravity cooldown. Operations seen: remove, set. Thresholds seen: 1...</li>
+<li>terf_data_L: alarm effects. Operations seen: add, set. Thresholds seen: 6.</li>
+<li>terf_data_M: tau cannon charge. Operations seen: set.</li>
+<li>terf_data_N: radioactive skin contamination. Operations seen: operation, remove, set. Thresholds seen: 1.., ..-1.</li>
+<li>terf_data_O: oxygen amount. Operations seen: add, operation, remove. Thresholds seen: 1.., ..300, ..200.</li>
+<li>terf_data_P: screenshake explosion. Operations seen: add, operation, remove, set. Thresholds seen: 1.., 6.</li>
+<li>terf_data_Q: no oxygen damage. Operations seen: add, remove, set. Thresholds seen: 0, 1.., 512...</li>
+<li>terf_data_R: bleeding effect. Operations seen: remove, set. Thresholds seen: 1.., ..500, ..400, ..300, ..200.</li>
+<li>terf_data_S: launch reset. Thresholds seen: 1...</li>
+<li>terf_data_T: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add.</li>
+<li>terf_data_X: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>terf_data_Z: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>amount (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 2000...</li>
+<li>block_found (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 0.</li>
+<li>calc (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>calc2 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>charge_rate (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>current_player_number (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add.</li>
+<li>damage (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation.</li>
+<li>decimal_0 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>decimal_1 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>decimal_2 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>distance (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add. Thresholds seen: 10...</li>
+<li>enable_farting (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 1.</li>
+<li>enable_oxygen_system (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 1.</li>
+<li>error (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: -1, 3, 2.</li>
+<li>ETratetimer (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 5...</li>
+<li>fluid_amount (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation, remove, set. Thresholds seen: ..0, ..-1.</li>
+<li>hazmat_pieces (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, set. Thresholds seen: 4...</li>
+<li>iy (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: ..-1.</li>
+<li>mode (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 0, 1.</li>
+<li>motion_x (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>motion_y (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>motion_z (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>multimeter_block_in_sight (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 1, 0.</li>
+<li>pitch (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation. Thresholds seen: 1, 0, -1.</li>
+<li>playamongusjoinsound (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 1.</li>
+<li>power_max (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>power_storage (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation. Thresholds seen: 1...</li>
+<li>progress (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>rad_remove_adder (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation, set.</li>
+<li>raytermination (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, set. Thresholds seen: ..15, ..40.</li>
+<li>restricted_fluid_id (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 1.</li>
+<li>rotation_x (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation. Thresholds seen: 60000..120000, -120000..-60000, -30000..30000, 150000.., ..-150000.</li>
+<li>rotation_y (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>rotdiff (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove. Thresholds seen: 181.., ..-181.</li>
+<li>scale (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, set. Thresholds seen: 1.., ..-1.</li>
+<li>sneaking (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 1, 0.</li>
+<li>speed (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 60...</li>
+<li>syringe_amount (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation, set. Thresholds seen: 0, 1000.., ..-1, ..0.</li>
+<li>temp3 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>temp4 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>tick_prismarine_bits (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set.</li>
+<li>transfer_amount (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation, set.</li>
+<li>tx (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove.</li>
+<li>tz (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove.</li>
+<li>vector (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, remove.</li>
+<li>water (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 0, 1.</li>
+<li>x (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>x1 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove, set. Thresholds seen: 17.., ..-17, ..-1, 1...</li>
+<li>y (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>y_offset (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation, set.</li>
+<li>y1 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove, set. Thresholds seen: 17.., ..-17, ..-1.</li>
+<li>yaw (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation.</li>
+<li>z (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation.</li>
+<li>z_offset (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: operation, set.</li>
+<li>z1 (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation, remove, set. Thresholds seen: 17.., ..-17, ..-1.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>attract_x is recalculated from stored command output in attract_items.mcfunction.</li>
+<li>attract_y is recalculated from stored command output in attract_items.mcfunction.</li>
+<li>attract_z is recalculated from stored command output in attract_items.mcfunction.</li>
+<li>x is recalculated from stored command output in attract_items_as.mcfunction.</li>
+<li>y is recalculated from stored command output in attract_items_as.mcfunction.</li>
+<li>z is recalculated from stored command output in attract_items_as.mcfunction.</li>
+<li>motion_x is recalculated from stored command output in attract_items_as.mcfunction.</li>
+<li>motion_y is recalculated from stored command output in attract_items_as.mcfunction.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This is a player-facing runtime system, so it is usually triggered by interacting with the named block, item, or event rather than crafted as a standalone unlock.</li>
+<li>If a matching advancement exists elsewhere in the pack, that advancement is the clearest player-visible signal that the interaction happened successfully.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

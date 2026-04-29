@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/event-failure-chains.html">Back to Event &amp; Failure Chains</a>
@@ -77,7 +78,38 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>This TERF advancement represents the pack milestone &#39;CCFR&#39; and uses the in-game description &#39;Experience the MCFR detonation&#39;.</p>
+<p>Its parent is terf:mcfr/mcfr_startup, so it sits inside an existing TERF progression chain instead of acting as a completely isolated trigger.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>Display icon: minecraft:tnt.</li>
+<li>Parent advancement: terf:mcfr/mcfr_startup.</li>
+<li>Criterion &#39;Explode MCFR&#39;: trigger minecraft:impossible.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>No numeric calculations are defined in this advancement JSON. Completion is criteria-driven, and TERF functions may grant it directly when the tracked event happens.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>Gameplay intent from the advancement text: Experience the MCFR detonation.</li>
+<li>All listed criteria use minecraft:impossible, which means the pack is expected to grant this advancement from scripted logic rather than a vanilla trigger alone.</li>
+<li>Because it has a parent advancement, you should expect the parent milestone to exist first in the intended progression flow.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

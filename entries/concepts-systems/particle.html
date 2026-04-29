@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/environmental-simulation-systems.html">Back to Environmental &amp; Simulation Systems</a>
@@ -77,7 +78,47 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Particle is a scripted TERF system implemented through 23 scanned function file(s).</p>
+<p>The source is split into subsystem folders such as Gas Leak, Homongous Flash, Humongous Fire, Humongous Smoke, Large Flash, Light Beam, which suggests the pack treats this as a reusable runtime system rather than a single one-off command.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: time. Operations seen: add, operation. Thresholds seen: 80.., ..39, 40..57, 58.., 58.</li>
+<li>terf_data_B: max time. Thresholds seen: 0...</li>
+<li>terf_data_X: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation.</li>
+<li>terf_data_Y: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation.</li>
+<li>terf_data_Z: Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: add, operation.</li>
+<li>speed (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Thresholds seen: 1.., 2...</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Observed scripted operation in move.mcfunction: execute store result storage terf:temp args.x float 0.001 run scoreboard players get @s terf_data_X</li>
+<li>Observed scripted operation in move.mcfunction: execute store result storage terf:temp args.y float 0.001 run scoreboard players get @s terf_data_Y</li>
+<li>Observed scripted operation in move.mcfunction: execute store result storage terf:temp args.z float 0.001 run scoreboard players get @s terf_data_Z</li>
+<li>Observed scripted operation in move.mcfunction: scoreboard players operation @s[tag=!terf_noslow] terf_data_X *= 9 terf_states</li>
+<li>Observed scripted operation in move.mcfunction: scoreboard players operation @s[tag=!terf_noslow] terf_data_Y *= 9 terf_states</li>
+<li>Observed scripted operation in move.mcfunction: scoreboard players operation @s[tag=!terf_noslow] terf_data_Z *= 9 terf_states</li>
+<li>Observed scripted operation in move.mcfunction: scoreboard players operation @s[tag=!terf_noslow] terf_data_X /= 10 terf_states</li>
+<li>Observed scripted operation in move.mcfunction: scoreboard players operation @s[tag=!terf_noslow] terf_data_Y /= 10 terf_states</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This system is generally achieved by creating the environmental condition that the functions look for, such as a matching block layout, entity state, or ambient pack event.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

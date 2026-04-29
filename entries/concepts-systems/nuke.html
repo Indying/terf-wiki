@@ -17,6 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/entity-projectile-systems.html">Back to Entity &amp; Projectile Systems</a>
@@ -77,7 +78,44 @@
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Nuke is a scripted TERF system implemented through 8 scanned function file(s).</p>
+<p>The source is split into subsystem folders such as Test, which suggests the pack treats this as a reusable runtime system rather than a single one-off command.</p>
+<p>Inline terf_data comments and scoreboard mutations were present in the scanned files, so the value breakdown below reflects explicit state variables rather than guesses.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: time. Operations seen: operation, set.</li>
+<li>terf_data_B: countdown. Operations seen: operation, remove, set. Thresholds seen: 301.., 201..300, ..200, ..100, ..40.</li>
+<li>sneaking (terf_states): Referenced by the scanned TERF logic, but no inline comment described it directly. Operations seen: set. Thresholds seen: 1, 0.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>temp copies or transforms terf_data_A through terf_states scratch math in add_time.mcfunction.</li>
+<li>sneaking is set to 0 in add_time.mcfunction.</li>
+<li>sneaking is set to 1 in add_time.mcfunction.</li>
+<li>sneaking uses the shared terf_states range 1 in add_time.mcfunction.</li>
+<li>sneaking uses the shared terf_states range 0 in add_time.mcfunction.</li>
+<li>temp uses the shared terf_states range 4801.. in add_time.mcfunction.</li>
+<li>temp uses the shared terf_states range ..-1 in add_time.mcfunction.</li>
+<li>terf_data_A is recalculated from the shared temp terf_states score in add_time.mcfunction.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>This system is usually spawned by another TERF machine, weapon, projectile, or scripted event. The function directory defines behavior after creation, not a direct crafting recipe.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

@@ -23,6 +23,7 @@ If you see purple and black block the resource pack is not loaded."
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-04-29 00:17</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/concepts-systems/core-systems.html">Back to Core Systems</a>
@@ -89,7 +90,50 @@ If you see purple and black block the resource pack is not loaded.</p>
           </div>
         </section>
 
-        
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>This TERF advancement represents the pack milestone &#39;T.E.R.F&#39; and uses the in-game description &#39;The icon of this advancement is a resource pack test!
+
+If you see a lava-ish looking block, the resource pack is working.
+
+If you see a block with SHADER written on it, the resource pack is incompatible and you should report it.
+
+If you see purple and black block the resource pack is not loaded.&#39;.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>Display icon: minecraft:carrot_on_a_stick.</li>
+<li>Show toast: False.</li>
+<li>Announce to chat: False.</li>
+<li>Criterion &#39;requirement&#39;: trigger minecraft:tick.</li>
+<li>Reward function: terf_oldmapadditions:tutorialstart.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>No numeric calculations are defined in this advancement JSON. Completion is criteria-driven, and TERF functions may grant it directly when the tracked event happens.</li>
+</ul>
+        </section>
+
+                <section class="doc-section">
+          <h2>How to Achieve</h2>
+          <ul class="detail-list">
+<li>Gameplay intent from the advancement text: The icon of this advancement is a resource pack test!
+
+If you see a lava-ish looking block, the resource pack is working.
+
+If you see a block with SHADER written on it, the resource pack is incompatible and you should report it.
+
+If you see purple and black block the resource pack is not loaded..</li>
+<li>This advancement can be progressed by normal TERF ticking. In practice that means it is passively granted or maintained once the pack detects the right state.</li>
+</ul>
+        </section>
+
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

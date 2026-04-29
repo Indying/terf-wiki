@@ -255,6 +255,15 @@ h3 {
   font-size: 0.9rem;
 }
 
+.brand-meta {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
 .topbar-link {
   text-decoration: none;
   color: var(--accent);
@@ -845,6 +854,10 @@ h3 {
   }
 
   .brand-subtitle {
+    display: none;
+  }
+
+  .brand-meta {
     display: none;
   }
 }
