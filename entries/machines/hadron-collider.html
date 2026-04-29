@@ -6,7 +6,7 @@
     <title>Hadron Collider | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 24 function file(s) under the TERF machine controller tree."
+      content="Recipe-driven collider that measures its ring, burns power by beam length, and can destabilize into explosions when the configured recipe is too demanding."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Hadron Collider</h1>
-        <p class="doc-intro">Machine logic implemented through 24 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Recipe-driven collider that measures its ring, burns power by beam length, and can destabilize into explosions when the configured recipe is too demanding.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span><span class="pill">Advancement</span><span class="pill">Damage Type</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,38 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>The Hadron Collider is a beam machine with a stored recipe, a remaining-shot counter, and a measured ring length. Every active tick it drains power based on current ring length, and every firing cycle it raycasts the ring again before updating its power ceiling and checking for instability.</p>
+<p>Its control panel exposes three separate views: status and elapsed time, current power / shots / recipe id, and the measured ring length with the live injection multiplier.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: shots left in the currently loaded recipe.</li>
+<li>terf_data_B: uptime / retry timer.</li>
+<li>terf_data_C: measured ring length.</li>
+<li>terf_data_D: injection multiplier. Setup initializes it to 1, and the side buttons clamp it inside 1..16 in practice.</li>
+<li>datapipes_lib_power_storage: live power buffer. The collider refuses to fire unless at least 10000 is available.</li>
+<li>datapipes_lib_power_max: recalculated from ring length as length * 1600.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Idle setup power ceiling starts at 100000, but every measured firing cycle overwrites it with terf_data_C * 1600.</li>
+<li>Active per-tick power drain = terf_data_C * 16.</li>
+<li>The machine only enters operation when terf_data_A &gt;= 1 and datapipes_lib_power_storage &gt;= 10000.</li>
+<li>Instability check: the machine reads stored_recipe.l, multiplies it by terf_data_D, and compares it against the measured ring length. If the scaled recipe requirement is greater than the ring length, the collider destabilizes instead of cleanly finishing the shot.</li>
+<li>Error recovery timer: while failed, terf_data_B counts up until 1250, then the machine clears terf_hadronfailed and resets the timer to 0.</li>
+<li>Panel status codes are source-backed: 1 = collider running, 2 = low power, 3 = no valid recipe, 5 = error / retrying, 6 = interface broken.</li>
+<li>Beam explosion staging uses stepped length thresholds after an internal +20 offset. Extra explosion steps appear at effective lengths 335, 668, 1000, 1334, 1667, and 2000.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

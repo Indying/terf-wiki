@@ -6,7 +6,7 @@
     <title>OpenCore Control Panel | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 20 function file(s) under the TERF machine controller tree."
+      content="Four-mode operator interface for OpenCore power lasers, cooling lasers, startup flow, and reactor statistics."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">OpenCore Control Panel</h1>
-        <p class="doc-intro">Machine logic implemented through 20 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Four-mode operator interface for OpenCore power lasers, cooling lasers, startup flow, and reactor statistics.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,35 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>The OpenCore Control Panel is a UI router. It does not simulate the reactor directly; it cycles between four screen groups, toggles selected vs. hover states, and forwards startup or shutdown commands to the linked OpenCore when the right conditions are met.</p>
+<p>This panel also owns a small amount of local UI animation state so button fills and selected pages can persist between clicks.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: panel screen-state selector. 0..3 are hover states for power laser, cooling laser, startup, and stats. 10..13 are the corresponding selected states.</li>
+<li>terf_data_B: local power-laser slider fill / click animation amount. The panel clamps it inside 0..100.</li>
+<li>terf_data_C: local cooling-laser slider fill / click animation amount. The panel clamps it inside 0..100.</li>
+<li>terf_data_D: linked reactor state mirrored from the core. The panel checks it to decide whether startup, charging, shutdown, or meltdown screens should be shown.</li>
+<li>terf_data_E: linked reactor event timer mirrored from the core and used for countdown text.</li>
+<li>Tag terf_displaytopcoil: toggles the stats page between top-coil and bottom-coil views.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Left-click navigation rotates the hover order backward (0 -&gt; 3 -&gt; 2 -&gt; 1 -&gt; 0) and also decrements local slider fills while the selected power-laser or cooling-laser page is open.</li>
+<li>Middle-click toggles between hover and selected states (0 &lt;-&gt; 10, 1 &lt;-&gt; 11, 2 &lt;-&gt; 12, 3 &lt;-&gt; 13). Startup and stats have extra guards so they collapse back to hover when the linked reactor is already busy.</li>
+<li>Right-click navigation rotates the hover order forward (0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; 0) and increments the local slider fills while the selected power-laser or cooling-laser page is open.</li>
+<li>Startup gating is source-backed: system check completes at 97 ticks, the panel advertises a 10MW+ requirement before indexing / charging, and shutdown only becomes available once no second operation phase remains.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

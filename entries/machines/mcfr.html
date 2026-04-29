@@ -6,7 +6,7 @@
     <title>MCFR | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 36 function file(s) under the TERF machine controller tree."
+      content="Temperature-driven reactor that converts fuel and coolant into pressure, steam, waste, and eventually catastrophic overpressure."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">MCFR</h1>
-        <p class="doc-intro">Machine logic implemented through 36 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Temperature-driven reactor that converts fuel and coolant into pressure, steam, waste, and eventually catastrophic overpressure.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,49 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>MCFR is a continuous reactor simulation with persistent temperature, fluid storage, ignition, waste production, and overpressure behavior. Its main tick reads coolant, steam, fuel, and waste amounts from the machine fluid array and runs a reaction only after the core reaches ignition temperature.</p>
+<p>The reactor spends most of its logic budget on three loops: building pressure from hot fuel and waste, boiling coolant into steam to pull heat back out, and converting consumed fuel into waste through buffered integer math.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: reactor temperature with *10000 precision.</li>
+<li>terf_data_B: reactor height. Height is reused as a divisor in pressure, cooling, and fuel-usage logic.</li>
+<li>terf_data_C: waste currently stuck inside the catalyst instead of the output fluid buffer.</li>
+<li>terf_data_D: fuel-per-waste ratio. Positive values buffer waste production; negative values directly pull catalyst waste back down.</li>
+<li>terf_data_E: waste buffer used before whole waste units are added into terf_data_C.</li>
+<li>terf_data_F: fuel buffer used before whole fuel units are removed from the fuel tank.</li>
+<li>terf_data_G: ignition temperature threshold. The heavy reaction path only runs when terf_data_A &gt;= terf_data_G.</li>
+<li>terf_data_H: power-output scalar that multiplies reaction rate and also affects fuel usage.</li>
+<li>datapipes_lib_power_max: initialized to 10000 in setup.</li>
+<li>Fluid slot 0: water, max 100000.</li>
+<li>Fluid slot 1: terf.high_pressure_steam, max 200000.</li>
+<li>Fluid slot 2: terf.hydrogen, max 100000 and stores the divided core temperature as an extra temperature field.</li>
+<li>Fluid slot 3: waste / byproduct output, max 100000.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Passive heat dissipation removes 100 temperature units per tick whenever terf_data_A &gt;= 100.</li>
+<li>Displayed core temperature = terf_data_A / 10000.</li>
+<li>Pressure = (fuel_amount + waste_amount + terf_data_C) / terf_data_B * core_temp_divided.</li>
+<li>Cooling rate starts as core_temp_divided / 10, then multiplies by core_temp_divided, divides by 100, multiplies by coolant amount, and divides by mcfr_cooling_rate_divider.</li>
+<li>Steam production uses buffered integer math: cooling_rate * 40 is added to steam, then the same rate is divided back down and removed from coolant.</li>
+<li>Temperature cooling applied to the core = cooling_rate * mcfr_cooling_multiplier / terf_data_B.</li>
+<li>Reaction rate = ((fuel_amount / terf_data_B) * (core_temp_divided - ignition_temp_divided) / 200 * terf_data_H) / 5600.</li>
+<li>The resulting reaction rate is added directly into terf_data_A, so hotter fuel increases future pressure and cooling demand.</li>
+<li>Fuel usage buffer: fuel_usage = reaction_rate * terf_data_B, fuel_usage_divider = terf_data_H * mcfr_fuel_usage_divider, fuel_used = terf_data_F / fuel_usage_divider.</li>
+<li>Positive terf_data_D values route produced waste through terf_data_E and only add whole units into terf_data_C. Negative terf_data_D values directly subtract from terf_data_C.</li>
+<li>Visual overpressure effects start at pressure &gt;= 10000000. Full reactor detonation starts at pressure &gt;= 25000000.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

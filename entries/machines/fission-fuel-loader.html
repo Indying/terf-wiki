@@ -6,7 +6,7 @@
     <title>Fission Fuel Loader | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 7 function file(s) under the TERF machine controller tree."
+      content="Loader that converts pellet items into a spawned fission fuel rod over a fixed progress window."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Fission Fuel Loader</h1>
-        <p class="doc-intro">Machine logic implemented through 7 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Loader that converts pellet items into a spawned fission fuel rod over a fixed progress window.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,33 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>The Fission Fuel Loader is a timed assembly machine. It reads fuel type metadata from the center inventory slot, consumes pellets in steps, and on completion spawns a terf_fuel_rod marker above itself with copied custom fuel data.</p>
+<p>The loader is intentionally simple: all of its persistent progress lives in one counter and one cached NBT field for the currently loaded fuel type.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: load progress counter.</li>
+<li>data.terf.fission_fuel_loader.loading_type: cached fuel type copied from slot 2 when a new loading cycle begins.</li>
+<li>Scratch score terminated: set by validation helpers so the loader can abort and reset early if the structure or inventory is invalid.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Every successful operation tick adds 1 to terf_data_A.</li>
+<li>Every 20 progress points, the loader plays the pellet-loading sound and decrements one item from slot 2.</li>
+<li>Completion threshold: terf_data_A &gt;= 200.</li>
+<li>On completion, the machine summons a terf_fuel_rod marker, copies the stored fuel data into it, resets terf_data_A to 0, and clears the cached loading type.</li>
+<li>The completion path also copies the current slot-2 item into temporary storage with count = 10, then runs add_fuel one block above to refill the placed rod structure.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

@@ -6,7 +6,7 @@
     <title>Fission Reactor | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 8 function file(s) under the TERF machine controller tree."
+      content="Fuel-rod and neutron logic for the fission system, including heat spread, decay spread, steam generation, and core failure."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Fission Reactor</h1>
-        <p class="doc-intro">Machine logic implemented through 8 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Fuel-rod and neutron logic for the fission system, including heat spread, decay spread, steam generation, and core failure.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,37 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>The Fission Reactor files in this pack model individual fuel-rod markers rather than a single large controller score set. Each rod tracks its own temperature and decay, exchanges heat with neighbors, and spawns neutrons when fuel is still present.</p>
+<p>The logic is deliberately local: rods look at adjacent rod markers, the block above them, and nearby neutrons. This makes temperature and decay propagate through the rod network over time instead of jumping instantly across the whole structure.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: rod temperature.</li>
+<li>terf_data_B: rod decay.</li>
+<li>terf_data_C: maximum decay. If it is unset, the rod loads data.terf.fuel.max_decay into this score.</li>
+<li>Tag terf_radioactive: added when the rod sits on light_blue_glazed_terracotta.</li>
+<li>Nearby terf_neutron markers: if one already exists within 0.25, the rod does not spawn another burst that tick.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Explosion threshold: if terf_data_A &gt;= 1000 and the rod has not already exploded, the rod runs explode_core.</li>
+<li>Passive air cooling: if the block above is air and the rod is above 0, temperature drops by 1.</li>
+<li>Water cooling: temp = floor(terf_data_A / 25) + 2, clamped to 20. If the block above is water and the rod temperature is at least 10, the rod subtracts that cooling amount from terf_data_A.</li>
+<li>Steam emission starts when the block above is water and terf_data_A &gt;= 500.</li>
+<li>Heat spread averages the current rod and the rod above. The combined temperature is split in half with remainder handling, then the current rod gains an extra +10 heat spike and terf_data_B increases by 1.</li>
+<li>Decay spread uses the same pairwise half-and-remainder pattern as temperature spread.</li>
+<li>If the rod still contains valid fission_fuel custom data and no neutron is already overlapping it, the rod summons two new neutrons.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

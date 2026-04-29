@@ -6,7 +6,7 @@
     <title>Stasis Laser | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 16 function file(s) under the TERF machine controller tree."
+      content="Validation-heavy support laser that checks a reactor port, follows a cable path to a laser head, charges for 100 ticks, and then fires."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Stasis Laser</h1>
-        <p class="doc-intro">Machine logic implemented through 16 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Validation-heavy support laser that checks a reactor port, follows a cable path to a laser head, charges for 100 ticks, and then fires.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,36 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Stasis Laser is closer to a scripted event trigger than a steady-state machine. A button press validates the port structure, checks for a fuel block, recursively walks piston cabling to find a laser assembly and linked reactor, and only then starts its timed charge-up.</p>
+<p>Once armed, the machine counts upward until it reaches the firing threshold. During the charge window it drives screen text, particles, sounds, screenshake, and the linked beam marker.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: charge / activation timer. 1..99 is the charging window, 100 fires the machine, and the beam marker will stop it again if the timer reaches 1000+ during extended operation.</li>
+<li>Scratch score status: validation state. 0 = no laser found, 1 = laser structure broken, 2 = no reactor found, 3 = no power source, 4 = ready for firing but final condition not met, 5 = fully validated and ready to activate.</li>
+<li>Scratch score terminated: recursion guard for cable and raycast scans. Validation paths initialize it to 100 and decrement it every step.</li>
+<li>Scratch score has_fuel: set to 1 when the block below the port power location is a minecraft:netherite_block.</li>
+<li>Scratch score succeeded: local structure-validation success flag.</li>
+<li>Linked reactor state: as_reactor.mcfunction checks the reactor it found and only upgrades the status to the final activation state when that reactor matches the required machine state.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Charge-up is linear: each active tick adds 1 to terf_data_A.</li>
+<li>The top-line standby text appends one extra . every 5 ticks while terf_data_A &lt; 100.</li>
+<li>A major sound cue starts at charge 35, while ominous-spawning particles continue through charge 70.</li>
+<li>Firing threshold: terf_data_A = 100.</li>
+<li>Both cable tracing and laser raycasting stop early when terminated reaches 0, which prevents infinite recursive scans through malformed builds.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

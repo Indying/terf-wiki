@@ -6,7 +6,7 @@
     <title>STFR Control Panel | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 39 function file(s) under the TERF machine controller tree."
+      content="Control desk for the STFR that mirrors core state, exposes manual setpoints, and arms emergency actions."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">STFR Control Panel</h1>
-        <p class="doc-intro">Machine logic implemented through 39 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Control desk for the STFR that mirrors core state, exposes manual setpoints, and arms emergency actions.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,46 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>The STFR Control Panel is a front-end machine rather than a second reactor. Its job is to mirror linked-core values onto signs, let the operator step setpoints up or down, and fire state-specific functions such as startup confirmation, shutdown, power-surge priming, and restabilization.</p>
+<p>Most of the important numbers on this page are values that live on the linked STFR core. The panel reads them, displays them, and in a few cases writes them back in +1 or -1 steps.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: linked reactor status. The panel checks this before allowing startup, shutdown, restabilization, or self-destruct related actions.</li>
+<li>terf_data_E: linked reactor event timer. Used for startup-complete checks and shutdown-failure recovery windows.</li>
+<li>terf_data_F: stabilizer offset control. Button files clamp it inside -99..99.</li>
+<li>terf_data_G: stabilizer input control. In the core math this ultimately feeds shield behavior. Button files clamp it inside 0..99.</li>
+<li>terf_data_H: power laser setpoint. Button files clamp it inside 0..99.</li>
+<li>terf_data_I: pressure vent setpoint. Button files clamp it inside 0..99.</li>
+<li>terf_data_J: fuel injection setpoint. Button files clamp it inside 0..99.</li>
+<li>terf_data_K: RF suppression setpoint on this controller revision. Button files clamp it inside 0..89.</li>
+<li>terf_data_U: power-surge state / timer. The panel primes, confirms, or aborts surge logic based on this value.</li>
+<li>terf_data_Ab: event logistics flag used during shutdown-failure recovery.</li>
+<li>terf_data_Ad: capacitor charge. Manual power-surge priming requires at least 950000 charge.</li>
+<li>Tag terf_key_on: reactor key switch state.</li>
+<li>Tag terf_sstb_on: shutdown/startup permissive state.</li>
+<li>Tag terf_broadcaston: whether the panel allows broadcast messages.</li>
+<li>Tag terf_case_shield_primed: operator armed the case-shield control.</li>
+<li>Tag terf_power_surge_pressed: momentary edge detector for the power-surge button.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Each adjustment button changes its target value by exactly 1 and then runs turn_off_stone_button to reset the observer/button stack.</li>
+<li>terf_data_F is the only exposed bipolar setpoint on this panel and is clamped to -99..99. The other continuous controls are clamped to positive ranges.</li>
+<li>Normal startup path requires terf_data_A = 0, the key switch on, the SSTB on, and later working_stabs &gt;= 1 before the panel calls startup_confirmed/confirm_startup.</li>
+<li>Normal shutdown is only allowed while online and only when shield stress is low enough: ..19 in standard mode or ..7 in hardcore mode.</li>
+<li>Manual power surge can only be primed while online, with the surge state idle, the physical button active, and capacitor charge at 950000 or above.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

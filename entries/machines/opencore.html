@@ -6,7 +6,7 @@
     <title>OpenCore | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 47 function file(s) under the TERF machine controller tree."
+      content="Vertical exotic core reactor with staged startup, coil heating and cooling, stabilizer requirements, and a long meltdown timeline."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">OpenCore</h1>
-        <p class="doc-intro">Machine logic implemented through 47 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Vertical exotic core reactor with staged startup, coil heating and cooling, stabilizer requirements, and a long meltdown timeline.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,44 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>OpenCore is a staged reactor that uses a linked control panel to step through system check, indexing, charging, online processing, shutdown, and meltdown. Unlike the STFR, most of its active machine math is compact: it mainly converts panel inputs into core temperature change, watches structural tags, and advances scripted event timers.</p>
+<p>The online state is intentionally brittle. Missing coils or stabilizers, or sustained loss of buffer power, push the machine into the late-start meltdown path.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: UI state used by the control panel.</li>
+<li>terf_data_B: power laser input.</li>
+<li>terf_data_C: cooling laser input.</li>
+<li>terf_data_D: reactor state. 1 = system_check, 2 = indexing, 3 = charging, 4 = online, 5 = shutdown, 6 = meltdown.</li>
+<li>terf_data_E: event timer for the current state.</li>
+<li>terf_data_F: effect timer used by charging and other visuals.</li>
+<li>terf_data_G: core temperature.</li>
+<li>terf_data_H: distance between the top and bottom coils.</li>
+<li>terf_data_I: accumulated core damage caused by staying online without stored power.</li>
+<li>datapipes_lib_power_max: baseline power ceiling. System check raises it to 1000 at tick 97.</li>
+<li>Scratch score working_stabs: number of stabilizer tags currently present out of eight.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Baseline power drain every tick = datapipes_lib_power_max / 100, removed from datapipes_lib_power_storage.</li>
+<li>Online temperature change = + terf_data_B - terf_data_C while both top and bottom coils exist. Minimum temperature is clamped to -273.</li>
+<li>If working_stabs &lt;= 4, the machine enters the late-start meltdown path.</li>
+<li>If no stored power remains while online, terf_data_I increases by 1 per tick. Meltdown starts once terf_data_I &gt;= 400.</li>
+<li>Online phase completion uses the current recipe timer: once terf_data_E is greater than stored_recipe.operations[0].time, the machine runs phase_complete.</li>
+<li>Charging timeline: stabilizer beams start at tick 422, and the machine transitions to online at tick 475.</li>
+<li>System-check timeline: the timer can jump by +2 on low-beep ticks, and tick 97 marks the completion / power-max transition point.</li>
+<li>Meltdown timeline highlights: alarm at 30, major failure effects and advancement at 60, critical broadcast at 70, and completion at 710+.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

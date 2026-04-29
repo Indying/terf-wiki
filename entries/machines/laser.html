@@ -6,7 +6,7 @@
     <title>Laser | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 9 function file(s) under the TERF machine controller tree."
+      content="Straight-beam machine that reads a requested power setting from signs, smooths the change, and converts power directly into beam damage."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Laser</h1>
-        <p class="doc-intro">Machine logic implemented through 9 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Straight-beam machine that reads a requested power setting from signs, smooths the change, and converts power directly into beam damage.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span><span class="pill">Damage Type</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,38 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Laser is a relatively compact machine. It reads a requested power value from wall-sign screens, consumes that much buffer power every tick, and smooths the displayed / applied beam power so the number does not jump instantly from one setting to another.</p>
+<p>Once active, the machine determines its travel axis from rotation, builds a beam-argument payload with color and damage, and recursively steps forward until it hits a block or its recursion guard expires.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: smoothed live power level used for beam output.</li>
+<li>datapipes_lib_power_storage: current power buffer. The machine subtracts the requested sign power from this every tick.</li>
+<li>datapipes_lib_power_max: computed as requested_power * 100.</li>
+<li>Scratch score power: requested output read from the side signs before smoothing.</li>
+<li>Scratch score axis: beam travel axis. The code uses 1 or 3 depending on rotation.</li>
+<li>Scratch score terminated: recursion guard for the beam step loop, initialized to 200.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Requested power is read from the adjacent signs and clamped to 0+.</li>
+<li>Every tick, datapipes_lib_power_storage -= requested_power, then the buffer is clamped back to 0 if it underflows.</li>
+<li>Power ceiling = requested_power * 100.</li>
+<li>Smoothing rule: if requested power is lower than terf_data_A, subtract 1; if it is higher, add 1; then use the new terf_data_A as the actual beam power.</li>
+<li>Beam damage = power * 0.01.</li>
+<li>The beam only starts when the machine still has at least as much stored power as the current requested power.</li>
+<li>The step loop aborts after 200 recursive beam segments.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

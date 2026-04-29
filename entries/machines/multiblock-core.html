@@ -6,7 +6,7 @@
     <title>Multiblock Core | TERF Wiki</title>
     <meta
       name="description"
-      content="Craft your first multiblock core using the recipe book"
+      content="Crafted controller item used to place and orient TERF multiblock structures."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Multiblock Core</h1>
-        <p class="doc-intro">Craft your first multiblock core using the recipe book</p>
+        <p class="doc-intro">Crafted controller item used to place and orient TERF multiblock structures.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Recipe</span><span class="pill">Advancement</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,37 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Multiblock Core is not an active machine controller script in the scanned sources. In this repo snapshot it is defined through recipe and advancement data, plus item lore that explains how the placed controller is meant to be used.</p>
+<p>The lore is the important gameplay clue: place the core on the ground, insert the required block, and keep the structure oriented correctly because rotation matters.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>Recipe pattern: 231 / 444 / 132.</li>
+<li>Recipe key 1: minecraft:diamond.</li>
+<li>Recipe key 2: minecraft:redstone_torch.</li>
+<li>Recipe key 3: minecraft:iron_block.</li>
+<li>Recipe key 4: minecraft:copper_block.</li>
+<li>Result item model: terf:visual/multiblock_core.</li>
+<li>Result item name: Multiblock Core.</li>
+<li>Result rarity: rare.</li>
+<li>Result entity payload: places a marker with tag terf_multiblockcore.</li>
+<li>Runtime scoreboard values: no machine-local terf_data_* values were documented in the scanned recipe / advancement sources.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>No machine-local runtime calculations were documented in the scanned sources for this entry.</li>
+<li>The only source-backed assembly logic here is the shaped crafting pattern and the placement / rotation guidance embedded in the item lore.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

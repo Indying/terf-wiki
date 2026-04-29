@@ -6,7 +6,7 @@
     <title>STFR | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 314 function file(s) under the TERF machine controller tree."
+      content="Large multi-state fusion reactor with shield, spin, pressure, coolant, capacitor, and event systems tied together through stabilizers and emergency controls."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">STFR</h1>
-        <p class="doc-intro">Machine logic implemented through 314 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Large multi-state fusion reactor with shield, spin, pressure, coolant, capacitor, and event systems tied together through stabilizers and emergency controls.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,72 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>STFR is the largest state machine in this category. It maintains core temperature, spin, pressure, case temperature, coolant, steam, capacitor charge, broadcast state, multiple event branches, and six stabilizers that can fail independently.</p>
+<p>The core tick is structured in layers: it rebuilds fast scratch values, counts working stabilizers and turbines, applies state-specific behavior, and then runs the calculation pass that turns setpoints into shield stress, heating, cooling, fuel injection, and failure escalation.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_A: reactor status. 0 = offline, 1 = starting, 2 = startup confirmed, 3 = online, 4 = stopping, 5 = overload, 6 = meltdown, 7 = detonating, 8 = reaction loss, 9 = underload restabilization, 10 = in stasis, 11 = manual restabilization, 12 = startup overload, 13 = underload, 14 = sculk breakout, 15 = self destruct, 16 = stabilizer loss, 17 = shutdown failure.</li>
+<li>terf_data_B: shield intensity with *100 precision.</li>
+<li>terf_data_C: system-noise cooldown.</li>
+<li>terf_data_D: shield rotation state.</li>
+<li>terf_data_E: event timer.</li>
+<li>terf_data_F: stabilizer offset control.</li>
+<li>terf_data_G: stabilizer input / permeability control used by the core math.</li>
+<li>terf_data_H: power-laser setpoint.</li>
+<li>terf_data_I: pressure-vent setpoint.</li>
+<li>terf_data_J: fuel-injection setpoint.</li>
+<li>terf_data_K: RF-suppression setpoint.</li>
+<li>terf_data_L: core spin with *1000 precision.</li>
+<li>terf_data_M: core temperature with *1000 precision.</li>
+<li>terf_data_N: core pressure with *1000 precision.</li>
+<li>terf_data_O: case pressure with *10000 precision.</li>
+<li>terf_data_P: case temperature with *100000 precision.</li>
+<li>terf_data_Q: fuel stored locally with *1000 precision.</li>
+<li>terf_data_R: fuel stored in the core with *1000 precision.</li>
+<li>terf_data_S: previous broadcast warning level.</li>
+<li>terf_data_T: uptime in ticks.</li>
+<li>terf_data_U: dedicated power-surge timer / state.</li>
+<li>terf_data_V: stabilizer rotation state.</li>
+<li>terf_data_W: stabilizer animation state.</li>
+<li>terf_data_X: previous coolant amount.</li>
+<li>terf_data_Y: saved core temperature for automatic control.</li>
+<li>terf_data_Z: saved core spin for automatic control.</li>
+<li>terf_data_Aa: saved case pressure for automatic control.</li>
+<li>terf_data_Ab: event logistics.</li>
+<li>terf_data_Ac: radiation-surge counter / state.</li>
+<li>terf_data_Ad: capacitor charge.</li>
+<li>terf_data_Ae: broadcast limit / cooldown budget.</li>
+<li>terf_data_Af, terf_data_Ag, terf_data_Ah: generic event-storage slots used by scripted branches.</li>
+<li>Fluid slot 0: terf.high_pressure_steam, max 83580000.</li>
+<li>Fluid slot 1: water, max 3582000.</li>
+<li>Fluid slot 2: terf.gold_slurry, max 1000.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Working stabilizers begin at 6 and drop by 1 for each missing stabilizer tag.</li>
+<li>Reaction-rate multiplier from RF suppression = (400 - (terf_data_K * stabilizer_loss_multiplier)) / 4, with accuracy 100.</li>
+<li>Fuel-injection multiplier = terf_data_J * 24 before the reactor walks the injection list.</li>
+<li>Power-laser heating rate starts as terf_data_H * 50, is scaled by stabilizer loss, capped by available capacitor charge, multiplied by 1000, multiplied by 10 during power surge, and finally divided by core_shc before it is added into core_temp_change.</li>
+<li>Cooling begins only after the case is hotter than 100 C equivalent: cooling_rate = max(terf_data_P - 10000000, 0) / cooling_rate_divider.</li>
+<li>Capacitor charging steals part of the cooling budget. Up to 1000 charge units per tick can be diverted into terf_data_Ad before the remaining cooling is converted into coolant boil rate.</li>
+<li>Water-to-steam conversion uses coolant_boil_rate / 67, then multiplies removed coolant by 167 before adding it into the steam tank.</li>
+<li>Shield stress is the sum of pressure stress, spin stress, and the &#39;unknown&#39; shield-collapse term derived from 1000000 - core_pressure.</li>
+<li>Shield intensity decreases by shield_stress / 50 once the shield is active and stress reaches 100+. If stress stays below 100, shield intensity slowly regenerates by +1 per tick up to 10000.</li>
+<li>Spin slow rate = floor(core_spin_abs / 4) plus extra penalties at high spin and case pressure, then plus any event-driven spin_slow_adder.</li>
+<li>Case blowout checks begin at case_pressure_divided &gt;= 81156; case explosion checks begin at &gt;= 95156.</li>
+<li>Case fire starts at case_temp_divided &gt;= 1000, while case degradation starts at &gt;= 1084 behind a predicate-gated random check.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

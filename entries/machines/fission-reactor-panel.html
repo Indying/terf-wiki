@@ -6,7 +6,7 @@
     <title>Fission Reactor Panel | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 2 function file(s) under the TERF machine controller tree."
+      content="Readout panel that displays linked fission-sensor aggregates and alarms on unsafe rod temperatures."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Fission Reactor Panel</h1>
-        <p class="doc-intro">Machine logic implemented through 2 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Readout panel that displays linked fission-sensor aggregates and alarms on unsafe rod temperatures.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,34 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>The Fission Reactor Panel is a display and relay machine. It clears its aggregate scratch scores every tick, asks the linked Fission Sensor to repopulate them, then formats the result into fuel-rod and reaction-status screens.</p>
+<p>Unlike the reactor rod logic, this panel does not keep meaningful persistent machine-local terf_data_* values in the scanned files. Its state is almost entirely the aggregate scoreboard values it rebuilds each refresh.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>Global scratch score average_neutron_speed: running neutron-speed total divided into an average after sensor collection.</li>
+<li>Global scratch score neutron_flux: count of nearby neutron markers seen by the linked sensor.</li>
+<li>Global scratch score fuel_rod_count: count of nearby fuel-rod markers seen by the linked sensor.</li>
+<li>Global scratch score average_temp: running rod-temperature total divided into an average after sensor collection.</li>
+<li>Global scratch score max_temp: highest rod temperature seen this refresh. -69420 means no sensor data arrived and -420 means the sensor was present but found no rod data.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Average rod temperature = average_temp / fuel_rod_count.</li>
+<li>Average neutron speed = average_neutron_speed / neutron_flux.</li>
+<li>Alarm threshold: when max_temp &gt;= 600, the panel colors the max-temperature line red and plays terf:alarms.alarm7.</li>
+<li>Display fallbacks are sentinel-based: -69420 becomes the red No Sensor screen, while -420 becomes the yellow No Rod Data screen.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

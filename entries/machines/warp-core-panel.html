@@ -6,7 +6,7 @@
     <title>Warp Core Panel | TERF Wiki</title>
     <meta
       name="description"
-      content="Machine logic implemented through 11 function file(s) under the TERF machine controller tree."
+      content="Sign-driven configuration panel for warp bounds, target coordinates, and target dimension."
     />
     <link rel="stylesheet" href="../../styles.css" />
     <script src="../../theme.js" defer></script>
@@ -58,7 +58,7 @@
         </nav>
 
         <h1 class="doc-title">Warp Core Panel</h1>
-        <p class="doc-intro">Machine logic implemented through 11 function file(s) under the TERF machine controller tree.</p>
+        <p class="doc-intro">Sign-driven configuration panel for warp bounds, target coordinates, and target dimension.</p>
         <div class="meta-row"><span class="pill">Machines</span><span class="pill">Reactor &amp; Exotic Systems</span><span class="pill">Function Directory</span></div>
 
         <section class="doc-section">
@@ -78,6 +78,36 @@
             </article>
           </div>
         </section>
+
+                <section class="doc-section">
+          <h2>Description</h2>
+          <p>Warp Core Panel is a parser and sanitizer. It reads text from several signs, converts those strings into bounded numeric values, and writes the cleaned result back onto the linked Warp Core marker.</p>
+<p>The panel also rewrites bad input in place, so invalid numbers and dimensions fall back to safe defaults instead of leaving the core with unusable coordinates.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Value Breakdown</h2>
+          <ul class="detail-list">
+<li>terf_data_R, terf_data_S, terf_data_T: negative-side ship offsets for x/y/z written from the from X/Y/Z sign.</li>
+<li>terf_data_U, terf_data_V, terf_data_W: positive-side ship bounds for x/y/z written from the to X/Y/Z sign.</li>
+<li>terf_data_X, terf_data_Y, terf_data_Z: target coordinates after the parser adjusts for offsets.</li>
+<li>data.terf.dim: target dimension parsed from the dimension sign. Invalid input falls back to minecraft:overworld.</li>
+<li>warp_core_max_size: global clamp used to limit both negative and positive bounds.</li>
+</ul>
+        </section>
+
+        <section class="doc-section">
+          <h2>Calculations</h2>
+          <ul class="detail-list">
+<li>Negative bound minimums are hard-coded: X &gt;= 3, Y &gt;= 8, Z &gt;= 3.</li>
+<li>Positive bound minimums are the same: X &gt;= 3, Y &gt;= 8, Z &gt;= 3.</li>
+<li>Both negative and positive bounds clamp to warp_core_max_size before being written into the core.</li>
+<li>Positive-side values are stored as parsed_positive + negative_offset, so the core receives absolute far-edge extents rather than just the raw sign numbers.</li>
+<li>If target coordinates are invalid, the parser falls back to the core&#39;s current position. X and Z are then offset by terf_data_R and terf_data_T, while Y is adjusted by terf_data_S.</li>
+<li>If target dimension parsing fails, the panel rewrites the sign to minecraft:overworld and stores that dimension on the linked core.</li>
+</ul>
+        </section>
+
 
         <section class="doc-section">
           <h2>Source Notes</h2>

@@ -756,7 +756,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 5 function file(s) under the TERF machine controller tree.",
+        "summary":  "Sensor head that scans nearby fuel rods and neutrons, then feeds aggregate reactor statistics to linked panels.",
         "sourceFiles":  [
 
                         ],
@@ -1338,7 +1338,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 36 function file(s) under the TERF machine controller tree.",
+        "summary":  "Temperature-driven reactor that converts fuel and coolant into pressure, steam, waste, and eventually catastrophic overpressure.",
         "sourceFiles":  [
 
                         ],
@@ -1435,7 +1435,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 39 function file(s) under the TERF machine controller tree.",
+        "summary":  "Control desk for the STFR that mirrors core state, exposes manual setpoints, and arms emergency actions.",
         "sourceFiles":  [
 
                         ],
@@ -1579,7 +1579,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 8 function file(s) under the TERF machine controller tree.",
+        "summary":  "Fuel-rod and neutron logic for the fission system, including heat spread, decay spread, steam generation, and core failure.",
         "sourceFiles":  [
 
                         ],
@@ -2089,7 +2089,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 47 function file(s) under the TERF machine controller tree.",
+        "summary":  "Vertical exotic core reactor with staged startup, coil heating and cooling, stabilizer requirements, and a long meltdown timeline.",
         "sourceFiles":  [
 
                         ],
@@ -2191,7 +2191,7 @@
                             "Function Directory",
                             "Advancement"
                         ],
-        "summary":  "Machine logic implemented through 46 function file(s) under the TERF machine controller tree.",
+        "summary":  "Ship-moving warp multiblock that validates a bounded volume, checks the target site, charges its field, and either warps or overloads.",
         "sourceFiles":  [
                             "ref/terf/advancement/warp_core.json"
                         ],
@@ -2458,7 +2458,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 7 function file(s) under the TERF machine controller tree.",
+        "summary":  "Loader that converts pellet items into a spawned fission fuel rod over a fixed progress window.",
         "sourceFiles":  [
 
                         ],
@@ -2873,7 +2873,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 2 function file(s) under the TERF machine controller tree.",
+        "summary":  "Readout panel that displays linked fission-sensor aggregates and alarms on unsafe rod temperatures.",
         "sourceFiles":  [
 
                         ],
@@ -2921,7 +2921,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 20 function file(s) under the TERF machine controller tree.",
+        "summary":  "Four-mode operator interface for OpenCore power lasers, cooling lasers, startup flow, and reactor statistics.",
         "sourceFiles":  [
 
                         ],
@@ -3288,7 +3288,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 314 function file(s) under the TERF machine controller tree.",
+        "summary":  "Large multi-state fusion reactor with shield, spin, pressure, coolant, capacitor, and event systems tied together through stabilizers and emergency controls.",
         "sourceFiles":  [
 
                         ],
@@ -3536,7 +3536,7 @@
                             "Recipe",
                             "Advancement"
                         ],
-        "summary":  "Craft your first multiblock core using the recipe book",
+        "summary":  "Crafted controller item used to place and orient TERF multiblock structures.",
         "sourceFiles":  [
                             "ref/terf/recipe/multiblock_core.json",
                             "ref/terf/advancement/multiblock_core.json"
@@ -3659,7 +3659,7 @@
                             "Advancement",
                             "Damage Type"
                         ],
-        "summary":  "Machine logic implemented through 24 function file(s) under the TERF machine controller tree.",
+        "summary":  "Recipe-driven collider that measures its ring, burns power by beam length, and can destabilize into explosions when the configured recipe is too demanding.",
         "sourceFiles":  [
                             "ref/terf/advancement/hadron_collider.json",
                             "ref/terf/damage_type/hadron_collider.json"
@@ -3949,7 +3949,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 16 function file(s) under the TERF machine controller tree.",
+        "summary":  "Validation-heavy support laser that checks a reactor port, follows a cable path to a laser head, charges for 100 ticks, and then fires.",
         "sourceFiles":  [
 
                         ],
@@ -4264,7 +4264,7 @@
         "sourceTypes":  [
                             "Function Directory"
                         ],
-        "summary":  "Machine logic implemented through 11 function file(s) under the TERF machine controller tree.",
+        "summary":  "Sign-driven configuration panel for warp bounds, target coordinates, and target dimension.",
         "sourceFiles":  [
 
                         ],
@@ -4627,7 +4627,7 @@
                             "Function Directory",
                             "Damage Type"
                         ],
-        "summary":  "Machine logic implemented through 9 function file(s) under the TERF machine controller tree.",
+        "summary":  "Straight-beam machine that reads a requested power setting from signs, smooths the change, and converts power directly into beam damage.",
         "sourceFiles":  [
                             "ref/terf/damage_type/laser.json"
                         ],
