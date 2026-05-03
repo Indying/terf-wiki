@@ -17,7 +17,7 @@
         <a class="brand" href="../../index.html">
           <span class="brand-title">TERF Wiki</span>
           <span class="brand-subtitle">Generated pack reference</span>
-          <span class="brand-meta">v0.6.0 | Updated 2026-05-02 19:33</span>
+          <span class="brand-meta">v0.6.0 | Updated 2026-05-02 20:24</span>
         </a>
         <div class="topbar-actions">
           <a class="topbar-link" href="../../groups/machines/reactor-exotic-systems.html">Back to Reactor &amp; Exotic Systems</a>
@@ -118,6 +118,18 @@
         </section>
 
         
+                <section class="doc-section">
+          <h2>Trivia</h2>
+          <ul class="detail-list">
+<li>OpenCore has a hidden startup soundtrack split. charging/start.mcfunction branches between &#39;Dimrain47: Every End&#39; and &#39;Dimrain47: Every End Remix&#39; using secret_opencore_music, then rerolls that score with random value 1..50 for the next charge-up cycle. That makes the remix a 1-in-50 result on a later startup, while the other 49 rolls use the standard track.</li>
+<li>Because the music reroll happens after the playback branch, the current startup uses the previous secret_opencore_music result rather than the value it just rolled.</li>
+<li>The indexing phase is part recipe lock and part item magnet. check_item.mcfunction tests one stationary item right above the core for a valid recipe, but it also attracts up to three random nearby item entities from a 20-block radius every tick.</li>
+<li>OpenCore&#39;s system check is intentionally jittery instead of being a perfectly steady countdown. A low-beep roll adds +2 to terf_data_E, so the check can complete a little earlier than a straight one-tick rhythm suggests.</li>
+<li>The machine has a fast-track failure path while online: dropping to four or fewer working stabilizers, or running out of stored power until terf_data_I reaches 400, sends it into meltdown/start_late with the meltdown timer preloaded to 59 instead of starting from zero.</li>
+<li>phase_complete.mcfunction uses flute pitch as a tiny recipe-progress cue: pitch 2 plays when another stored operation still exists, while pitch 0 plays when the last operation just finished.</li>
+</ul>
+        </section>
+
 
 
         <section class="doc-section">

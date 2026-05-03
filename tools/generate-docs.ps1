@@ -253,6 +253,14 @@ $customEntryDocs = @{
       "System-check timeline: the timer can jump by +2 on low-beep ticks, and tick 97 marks the completion / power-max transition point.",
       "Meltdown timeline highlights: alarm at 30, major failure effects and advancement at 60, critical broadcast at 70, and completion at 710+."
     )
+    Trivia = @(
+      "OpenCore has a hidden startup soundtrack split. charging/start.mcfunction branches between 'Dimrain47: Every End' and 'Dimrain47: Every End Remix' using secret_opencore_music, then rerolls that score with random value 1..50 for the next charge-up cycle. That makes the remix a 1-in-50 result on a later startup, while the other 49 rolls use the standard track.",
+      "Because the music reroll happens after the playback branch, the current startup uses the previous secret_opencore_music result rather than the value it just rolled.",
+      "The indexing phase is part recipe lock and part item magnet. check_item.mcfunction tests one stationary item right above the core for a valid recipe, but it also attracts up to three random nearby item entities from a 20-block radius every tick.",
+      "OpenCore's system check is intentionally jittery instead of being a perfectly steady countdown. A low-beep roll adds +2 to terf_data_E, so the check can complete a little earlier than a straight one-tick rhythm suggests.",
+      "The machine has a fast-track failure path while online: dropping to four or fewer working stabilizers, or running out of stored power until terf_data_I reaches 400, sends it into meltdown/start_late with the meltdown timer preloaded to 59 instead of starting from zero.",
+      "phase_complete.mcfunction uses flute pitch as a tiny recipe-progress cue: pitch 2 plays when another stored operation still exists, while pitch 0 plays when the last operation just finished."
+    )
   }
   "warp_core" = [ordered]@{
     Summary = "Ship-moving warp multiblock that validates a bounded volume, checks the target site, charges its field, and either warps or overloads."
@@ -893,7 +901,8 @@ function New-SectionDoc {
     [string[]]$Description = @(),
     [string[]]$Values = @(),
     [string[]]$Calculations = @(),
-    [string[]]$HowTo = @()
+    [string[]]$HowTo = @(),
+    [string[]]$Trivia = @()
   )
 
   return [ordered]@{
@@ -901,6 +910,7 @@ function New-SectionDoc {
     Values = @($Values | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
     Calculations = @($Calculations | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
     HowTo = @($HowTo | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    Trivia = @($Trivia | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
   }
 }
 
@@ -911,6 +921,7 @@ function Merge-SectionDocs {
   $values = [System.Collections.ArrayList]::new()
   $calculations = [System.Collections.ArrayList]::new()
   $howTo = [System.Collections.ArrayList]::new()
+  $trivia = [System.Collections.ArrayList]::new()
 
   foreach ($doc in $Docs) {
     if ($null -eq $doc) { continue }
@@ -919,6 +930,7 @@ function Merge-SectionDocs {
     foreach ($item in @($doc.Values)) { Add-UniqueValue -List $values -Value ([string]$item) }
     foreach ($item in @($doc.Calculations)) { Add-UniqueValue -List $calculations -Value ([string]$item) }
     foreach ($item in @($doc.HowTo)) { Add-UniqueValue -List $howTo -Value ([string]$item) }
+    foreach ($item in @($doc.Trivia)) { Add-UniqueValue -List $trivia -Value ([string]$item) }
   }
 
   return [ordered]@{
@@ -926,6 +938,7 @@ function Merge-SectionDocs {
     Values = @($values)
     Calculations = @($calculations)
     HowTo = @($howTo)
+    Trivia = @($trivia)
   }
 }
 
@@ -1973,6 +1986,7 @@ foreach ($entry in $allEntries) {
     $valuesHtml = Bullet-ListHtml $pageDoc.Values
     $calculationsHtml = Bullet-ListHtml $pageDoc.Calculations
     $howToSection = ""
+    $triviaSection = ""
 
     if (@($pageDoc.HowTo).Count -gt 0) {
       $howToHtml = Bullet-ListHtml $pageDoc.HowTo
@@ -1980,6 +1994,17 @@ foreach ($entry in $allEntries) {
         <section class="doc-section">
           <h2>How to Achieve</h2>
           $howToHtml
+        </section>
+
+"@
+    }
+
+    if (@($pageDoc.Trivia).Count -gt 0) {
+      $triviaHtml = Bullet-ListHtml $pageDoc.Trivia
+      $triviaSection = @"
+        <section class="doc-section">
+          <h2>Trivia</h2>
+          $triviaHtml
         </section>
 
 "@
@@ -2002,6 +2027,7 @@ foreach ($entry in $allEntries) {
         </section>
 
         $howToSection
+        $triviaSection
 
 "@
   }
