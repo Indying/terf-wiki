@@ -80,7 +80,21 @@
           </div>
         </section>
 
-        
+        <section class="doc-section">
+          <h2>Description</h2>
+          <p>The Fabricator is a 3x3 pattern machine that snapshots the current grid into <code>stored_recipe</code>, immediately decrements all nine input slots, then runs a long timed animation before spawning the result.</p>
+          <p>Its most useful hidden interaction is that the trigger block in front does not just check for generic redstone. The machine explicitly distinguishes <code>#terf:redstoneactive[powered=true]</code> from <code>#terf:redstoneactive[lit=true]</code>, so different redstone components can change how ingredient consumption works.</p>
+        </section>
+
+        <section class="doc-section">
+          <h2>Special Interactions</h2>
+          <ul class="detail-list">
+            <li>A lever-style <code>powered=true</code> trigger runs the Fabricator as a normal one-shot craft and will consume the last copy of an ingredient if the recipe matches.</li>
+            <li>A redstone-torch-style <code>lit=true</code> trigger enables automation mode. In that mode the checks fail if any slot is down to exactly one item, so one copy can stay behind in the grid as a permanent recipe template.</li>
+            <li>The craft only turns into output at the end of a long timed sequence. If a hopper is under the machine at completion time, the output path uses the hopper-facing completion branch instead of the center drop branch.</li>
+            <li>The machine also grants the dedicated <code>terf:fabricator/fabricator</code> advancement when a recipe is accepted.</li>
+          </ul>
+        </section>
 
         <section class="doc-section">
           <h2>Source Notes</h2>
